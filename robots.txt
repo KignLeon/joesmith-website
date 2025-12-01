@@ -1,4 +1,4 @@
-# Lovoson Media Robots.txt
+# Joe Smith Official Robots.txt
 # Controls how search engines crawl and index the site
 
 User-agent: *
@@ -10,4 +10,4 @@ Disallow: /js/
 Disallow: /css/
 
 # Sitemap location
-Sitemap: https://www.lovosonmedia.com/sitemap.xml
+Sitemap: https://www.joesmithofficial/sitemap.xml
