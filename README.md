@@ -1,10 +1,8 @@
-Lovoson Media
-- Website Design & Management  
-- Email + SMS Automation  
-- Ads, Campaigns, and Brand Strategy  
+Joe Smith for Lemon Grove — Campaign Website 
 
-The website integrates modern design practices, real-time contact + onboarding forms 
-(via **Tally.so**), and SEO meta structures for discoverability. 
+This repository hosts the official campaign website for Joe Smith, candidate for Lemon Grove City Council.
+Designed and developed by Lovoson Media, the site focuses on accessibility, 
+modern civic design, and clear communication with voters.
 
 Author
 Leon C. Benefield
