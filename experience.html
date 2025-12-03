@@ -145,6 +145,7 @@
         <div class="flex flex-col"><span class="text-navy font-bold leading-none">JOE SMITH</span><span
             class="text-xs text-slate-500 uppercase tracking-widest">Council</span></div>
       </a>
+
       <div class="hidden md:flex gap-1">
         <a href="index.html"
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-white transition-all">Home</a>
@@ -155,11 +156,18 @@
         <a href="contact.html"
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-white transition-all">Contact</a>
       </div>
-      <a href="contact.html"
-        class="hidden md:inline-flex bg-navy hover:bg-navy-light text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105 active:scale-95">Donate</a>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="contact.html"
+          class="bg-navy hover:bg-navy-light text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105 active:scale-95">
+          Join the Movement
+        </a>
+      </div>
+
       <button class="md:hidden text-navy text-xl"
-        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i
-          class="fa-solid fa-bars"></i></button>
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
 
     <!-- Gradient Strip at Bottom of Nav -->
@@ -167,8 +175,11 @@
 
     <div id="mobile-menu"
       class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html"
-        class="text-navy font-bold">Experience</a><a href="contact.html">Contact</a>
+      <a href="index.html" class="text-lg font-bold text-navy">Home</a>
+      <a href="about.html" class="text-lg font-medium text-slate-600">About</a>
+      <a href="experience.html" class="text-lg font-medium text-slate-600">Experience</a>
+      <a href="contact.html" class="text-lg font-medium text-slate-600">Contact</a>
+      <a href="contact.html" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the Movement</a>
     </div>
   </nav>
 
