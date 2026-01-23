@@ -31,13 +31,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        
+      # We are creating a specific 'dist' folder to move only the web files into
+      # This ensures no Java files or hidden config files mess up the deploy
+      - name: Prepare Build
+        run: |
+          mkdir public_build
+          cp index.html public_build/
+          cp -r about public_build/
+          cp -r contact public_build/
+          cp -r experience public_build/
+          # Copy robots.txt and sitemap if they exist
+          cp robots.txt public_build/ || true
+          cp sitemap.xml public_build/ || true
+          # If you have an assets/images folder at root, copy that too:
+          # cp -r src/main/resources/public/imgs public_build/imgs || true 
+          # (Uncomment above line if images are broken)
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository (CHANGE THIS LINE)
-          path: '.'
+          # Upload only the folder we just prepared
+          path: 'public_build'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
