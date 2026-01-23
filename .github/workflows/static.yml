@@ -36,26 +36,33 @@ jobs:
         uses: actions/configure-pages@v5
         
       # Improved Build Step:
-      # 1. Create a build directory
-      # 2. Copy EVERYTHING from current directory into it (excluding .git and the build dir itself)
-      # 3. Clean up the build directory by removing backend/dev files we don't want published
+      # We create a clean directory and copy ONLY the website files.
+      # This guarantees no Java source files or hidden configs confuse the build.
       - name: Prepare Build
         run: |
-          mkdir public_build
-          # Copy all files from root to public_build, excluding the build dir itself and .git
-          rsync -av --progress . public_build --exclude public_build --exclude .git --exclude .github
+          mkdir _site
+          # Copy the main index file
+          cp index.html _site/
+          # Copy the sub-page folders (clean URLs)
+          cp -r about _site/ || echo "No about folder"
+          cp -r contact _site/ || echo "No contact folder"
+          cp -r experience _site/ || echo "No experience folder"
+          # Copy assets if they exist (adjust path if your images are in 'assets' or 'imgs')
+          # Based on your files, images seem to be in 'src/main/resources/public/imgs' OR root 'imgs'
+          # We try copying from root 'imgs' first, then fallback to src if needed
+          cp -r imgs _site/ || cp -r src/main/resources/public/imgs _site/imgs || echo "No images found"
+          cp -r css _site/ || cp -r src/main/resources/public/css _site/css || echo "No css found"
+          cp -r js _site/ || cp -r src/main/resources/public/js _site/js || echo "No js found"
           
-          # Now, remove the backend/source files from the deployment package
-          # We only want the HTML/CSS/JS/Assets
-          cd public_build
-          rm -rf src target pom.xml dependency-reduced-pom.xml .vscode
-          cd ..
+          # Copy standard files
+          cp robots.txt _site/ || true
+          cp sitemap.xml _site/ || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload the clean build folder
-          path: 'public_build'
+          path: '.'
           
       - name: Deploy to GitHub Pages
         id: deployment
