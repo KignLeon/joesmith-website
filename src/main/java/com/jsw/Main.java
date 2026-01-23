@@ -7,18 +7,20 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
 
+import static spark.Spark.after;
+import static spark.Spark.get;
+import static spark.Spark.notFound;
 import static spark.Spark.port;
 import static spark.Spark.post;
 import static spark.Spark.staticFiles;
 
 /**
- * File: Main.java This is the main entry point for the JSW website's backend
- * server. It uses the SparkJava framework to serve the website and handle form
- * submissions.
+ * File: Main.java
+ * Main entry point for the JSW website's backend server.
+ * Uses SparkJava to serve static files and handle form submissions.
  */
 public class Main {
 
-    // Logger for server-side events
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
     private static final Gson gson = new Gson();
 
@@ -26,19 +28,50 @@ public class Main {
     public static void main(String[] args) {
 
         // --- Server Configuration ---
-        // Set the port. Defaults to 8080 or uses the PORT env var (e.g. for Heroku/Render).
         port(getAssignedPort());
 
-        // Serve static files (HTML, CSS, JS, Images) from the "public" directory (standard Maven structure)
-        // OR root if configured differently. Based on your file structure, if "index.html" is at root,
-        // you might need to adjust where static files are located or move HTML/CSS into "src/main/resources/public".
-        // For this code, we assume standard behavior:
+        // Serve static files from src/main/resources/public
         staticFiles.location("/public");
+        
+        // Enable GZIP compression
+        after((request, response) -> {
+            response.header("Content-Encoding", "gzip");
+        });
 
-        // If you are running locally and files are in root, you might use:
-        // staticFiles.externalLocation(System.getProperty("user.dir")); 
-        // --- Routing ---
-        // Handle "Join the Movement" form submissions
+        // --- CRITICAL: Clean URL Routing ---
+        // These routes handle /about/, /experience/, /contact/ patterns
+        
+        get("/about", (req, res) -> {
+            res.redirect("/about/");
+            return null;
+        });
+        
+        get("/about/", (req, res) -> {
+            res.type("text/html");
+            return getStaticFile("/public/about/index.html");
+        });
+
+        get("/experience", (req, res) -> {
+            res.redirect("/experience/");
+            return null;
+        });
+        
+        get("/experience/", (req, res) -> {
+            res.type("text/html");
+            return getStaticFile("/public/experience/index.html");
+        });
+
+        get("/contact", (req, res) -> {
+            res.redirect("/contact/");
+            return null;
+        });
+        
+        get("/contact/", (req, res) -> {
+            res.type("text/html");
+            return getStaticFile("/public/contact/index.html");
+        });
+
+        // --- Form Submission Endpoints ---
         post("/join", (request, response) -> {
             response.type("application/json");
 
@@ -46,7 +79,6 @@ public class Main {
                 String requestBody = request.body();
                 JsonObject submission = gson.fromJson(requestBody, JsonObject.class);
 
-                // Basic validation
                 if (submission == null || !submission.has("email") || !submission.has("zip")) {
                     response.status(400);
                     return "{\"status\":\"error\", \"message\":\"Email and Zip Code are required.\"}";
@@ -55,7 +87,6 @@ public class Main {
                 String email = submission.get("email").getAsString();
                 String zip = submission.get("zip").getAsString();
 
-                // Log the data (In a real app, save to DB)
                 LOGGER.info("=========================================");
                 LOGGER.info("===      NEW CAMPAIGN SIGNUP         ===");
                 LOGGER.info("=========================================");
@@ -76,7 +107,6 @@ public class Main {
             }
         });
 
-        // Handle general "Contact" form submissions
         post("/contact", (request, response) -> {
             response.type("application/json");
             try {
@@ -89,17 +119,43 @@ public class Main {
             }
         });
 
+        // 404 Handler
+        notFound((req, res) -> {
+            res.type("text/html");
+            return "<html><body><h1>404 - Page Not Found</h1><p>The page you're looking for doesn't exist.</p><a href='/'>Go Home</a></body></html>";
+        });
+
         LOGGER.info("JSW Server started. Listening on port: {}", getAssignedPort());
+        LOGGER.info("Static files served from: /public");
+        LOGGER.info("Clean URLs enabled for: /about/, /experience/, /contact/");
     }
 
     /**
-     * Helper to get the port from the environment variable.
+     * Helper to get the port from environment variable.
      */
     static int getAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
-        return 8080; // Return default port if PORT isn't set
+        return 8080;
+    }
+
+    /**
+     * Helper to read static files from resources
+     */
+    @SuppressWarnings("UseSpecificCatch")
+    private static String getStaticFile(String path) {
+        try {
+            java.io.InputStream is = Main.class.getResourceAsStream(path);
+            if (is == null) {
+                LOGGER.error("File not found: {}", path);
+                return "<html><body><h1>404 - File Not Found</h1></body></html>";
+            }
+            return new String(is.readAllBytes(), java.nio.charset.StandardCharsets.UTF_8);
+        } catch (Exception e) {
+            LOGGER.error("Error reading file: {}", path, e);
+            return "<html><body><h1>Error loading page</h1></body></html>";
+        }
     }
 }
