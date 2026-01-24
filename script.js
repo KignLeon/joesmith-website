@@ -41,9 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // YOUR FORMSUBMIT TOKEN
     const FORM_ENDPOINT = "https://formsubmit.co/ajax/d0c3aa9a8589f7452b449592aef75f90";
 
+    console.log("Found " + forms.length + " forms to attach listeners to.");
+
     forms.forEach(form => {
         form.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Stop default reload/redirect
+            // CRITICAL: Stop the browser from submitting the form normally
+            e.preventDefault();
+            console.log("Form submission intercepted via JS.");
 
             // UI Elements
             let successMsg = form.querySelector('.success-message');
