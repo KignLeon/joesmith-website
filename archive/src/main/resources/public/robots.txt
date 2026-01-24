@@ -1,0 +1,13 @@
+# Joe Smith Official Robots.txt
+# Controls how search engines crawl and index the site
+
+User-agent: *
+Allow: /
+
+# Disallow internal or private files
+Disallow: /assets/private/
+Disallow: /js/
+Disallow: /css/
+
+# Sitemap location
+Sitemap: https://www.joesmithofficial/sitemap.xml
