@@ -138,53 +138,68 @@
 
   <!-- NAV -->
   <!-- CORRECTED NAVIGATION FOR ALL PAGES -->
-<!-- Replace the nav section in ALL your HTML files with this -->
+  <!-- Replace the nav section in ALL your HTML files with this -->
 
-<nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-    <a href="/" class="flex items-center gap-3 group">
-      <div class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
-        JS
-      </div>
-      <div class="flex flex-col">
-        <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
-        <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove Council</span>
-      </div>
-    </a>
-
-    <div class="hidden md:flex items-center gap-1">
-      <a href="/" class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Home</a>
-      <a href="/about/" class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
-      <a href="/experience/" class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Experience</a>
-      <a href="/contact/" class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
-    </div>
-
-    <div class="hidden md:flex items-center gap-4">
-      <a href="/contact/" class="bg-navy hover:bg-navy-light text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105 active:scale-95">
-        Join the Movement
+  <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3 group">
+        <div
+          class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
+          JS
+        </div>
+        <div class="flex flex-col">
+          <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
+          <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove Council</span>
+        </div>
       </a>
+
+      <!-- DESKTOP NAV - Notice: ALL links have the SAME default classes -->
+      <!-- The JavaScript below will add the active state dynamically -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="/" data-nav-item="home"
+          class="nav-link px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Home</a>
+        <a href="/about/" data-nav-item="about"
+          class="nav-link px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
+        <a href="/experience/" data-nav-item="experience"
+          class="nav-link px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
+        <a href="/contact/" data-nav-item="contact"
+          class="nav-link px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="/contact/"
+          class="bg-navy hover:bg-navy-light text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105 active:scale-95">
+          Join the Movement
+        </a>
+      </div>
+
+      <button class="md:hidden text-navy text-xl"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
 
-    <button class="md:hidden text-navy text-xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-  <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-gold to-navy"></div>
+    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-gold to-navy"></div>
 
-  <div id="mobile-menu" class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
-    <a href="/" class="text-lg font-medium text-slate-600">Home</a>
-    <a href="/about/" class="text-lg font-medium text-slate-600">About</a>
-    <a href="/experience/" class="text-lg font-bold text-navy">Experience</a>
-    <a href="/contact/" class="text-lg font-medium text-slate-600">Contact</a>
-    <a href="/contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the Movement</a>
-  </div>
-</nav>
+    <!-- MOBILE NAV - Notice: ALL links have the SAME default classes -->
+    <div id="mobile-menu"
+      class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
+      <a href="/" data-nav-item-mobile="home" class="mobile-nav-link text-lg font-medium text-slate-600">Home</a>
+      <a href="/about/" data-nav-item-mobile="about"
+        class="mobile-nav-link text-lg font-medium text-slate-600">About</a>
+      <a href="/experience/" data-nav-item-mobile="experience"
+        class="mobile-nav-link text-lg font-medium text-slate-600">Experience</a>
+      <a href="/contact/" data-nav-item-mobile="contact"
+        class="mobile-nav-link text-lg font-medium text-slate-600">Contact</a>
+      <a href="/contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the Movement</a>
+    </div>
+  </nav>
 
 
-<!-- CRITICAL: ALL links must end with / for clean URLs -->
-<!-- Use /about/ NOT /about.html -->
-<!-- Use /experience/ NOT /experience.html -->
-<!-- Use /contact/ NOT /contact.html -->
+  <!-- CRITICAL: ALL links must end with / for clean URLs -->
+  <!-- Use /about/ NOT /about.html -->
+  <!-- Use /experience/ NOT /experience.html -->
+  <!-- Use /contact/ NOT /contact.html -->
 
   <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto flex-grow w-full">
 
@@ -256,7 +271,8 @@
           <div class="relative md:pl-20">
             <div
               class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-navy text-white rounded-full items-center justify-center z-10 border-4 border-fuchsia-50 shadow-md text-xl">
-              <i class="fa-solid fa-briefcase"></i></div>
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
             <div class="glass-card p-8">
               <span
                 class="inline-block px-3 py-1 rounded-md bg-gold/10 text-gold text-xs font-bold uppercase mb-2">07/2022
@@ -274,7 +290,8 @@
           <div class="relative md:pl-20">
             <div
               class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
-              <i class="fa-solid fa-school"></i></div>
+              <i class="fa-solid fa-school"></i>
+            </div>
             <div class="glass-card p-8">
               <span
                 class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2021
@@ -289,7 +306,8 @@
           <div class="relative md:pl-20">
             <div
               class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
-              <i class="fa-solid fa-chalkboard-user"></i></div>
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
             <div class="glass-card p-8">
               <span
                 class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2019
@@ -305,7 +323,8 @@
           <div class="relative md:pl-20">
             <div
               class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
-              <i class="fa-solid fa-building-columns"></i></div>
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
             <div class="glass-card p-8">
               <span
                 class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">08/2016
@@ -319,7 +338,8 @@
           <div class="relative md:pl-20">
             <div
               class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
-              <i class="fa-solid fa-child-reaching"></i></div>
+              <i class="fa-solid fa-child-reaching"></i>
+            </div>
             <div class="glass-card p-8">
               <span
                 class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2012
@@ -387,6 +407,65 @@
       <p class="text-blue-400 text-sm">&copy; Paid for by Joe Smith for Lemon Grove City Council 2026</p>
     </div>
   </footer>
+
+  <script>
+      (function () {
+        'use strict';
+
+        // STEP 1: Get the current URL path
+        const currentPath = window.location.pathname;
+
+        // STEP 2: Determine which page we're on based on the URL
+        let activePage = 'home'; // Default to home
+
+        if (currentPath.includes('/about')) {
+          activePage = 'about';
+        } else if (currentPath.includes('/experience')) {
+          activePage = 'experience';
+        } else if (currentPath.includes('/contact')) {
+          activePage = 'contact';
+        }
+        // If path is exactly '/' or '/index.html', activePage stays 'home'
+
+        // STEP 3: Reset all desktop nav links to inactive state
+        const desktopLinks = document.querySelectorAll('.nav-link');
+        desktopLinks.forEach(link => {
+          // Remove active classes
+          link.classList.remove('text-navy', 'bg-navy/5', 'hover:bg-navy/10');
+          // Add inactive classes
+          link.classList.add('text-slate-500', 'hover:text-navy', 'hover:bg-gray-50');
+        });
+
+        // STEP 4: Reset all mobile nav links to inactive state
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+          // Remove active classes
+          link.classList.remove('text-navy', 'font-bold');
+          // Add inactive classes
+          link.classList.add('text-slate-600', 'font-medium');
+        });
+
+        // STEP 5: Apply active state to the current page - DESKTOP
+        const activeDesktopLink = document.querySelector(`[data-nav-item="${activePage}"]`);
+        if (activeDesktopLink) {
+          // Remove inactive classes
+          activeDesktopLink.classList.remove('text-slate-500', 'hover:text-navy', 'hover:bg-gray-50');
+          // Add active classes (this creates the grey circle effect)
+          activeDesktopLink.classList.add('text-navy', 'bg-navy/5', 'hover:bg-navy/10');
+        }
+
+        // STEP 6: Apply active state to the current page - MOBILE
+        const activeMobileLink = document.querySelector(`[data-nav-item-mobile="${activePage}"]`);
+        if (activeMobileLink) {
+          // Remove inactive classes
+          activeMobileLink.classList.remove('text-slate-600', 'font-medium');
+          // Add active classes (makes text bold and navy colored)
+          activeMobileLink.classList.add('text-navy', 'font-bold');
+        }
+
+        // DONE! The correct nav item now has the grey circle/active state
+      })();
+  </script>
 
 </body>
 
