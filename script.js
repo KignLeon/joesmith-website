@@ -5,7 +5,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- 1. Navigation Highlighting Logic ---
     const currentPath = window.location.pathname;
-    // Normalize path: treat /index.html as /, ensure trailing slash for folder paths
     let normalizedPath = currentPath;
     if (normalizedPath.endsWith('index.html')) {
         normalizedPath = normalizedPath.replace('index.html', '');
@@ -13,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!normalizedPath.endsWith('/') && normalizedPath !== '/') {
         normalizedPath += '/';
     }
-    
-    // Clean double slashes just in case
+
     const cleanPath = normalizedPath.replace('//', '/');
 
     const inactiveClasses = ['text-slate-500', 'hover:text-navy', 'hover:bg-gray-50'];
@@ -25,10 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         let linkPath = new URL(link.href).pathname;
         if (!linkPath.endsWith('/')) linkPath += '/';
-        
-        // Exact match for root, or subpath match for others (e.g. /about/ matches /about/)
-        const isActive = (cleanPath === '/' && linkPath === '/') || 
-                         (linkPath !== '/' && cleanPath.includes(linkPath));
+
+        const isActive = (cleanPath === '/' && linkPath === '/') ||
+            (linkPath !== '/' && cleanPath.includes(linkPath));
 
         if (isActive) {
             link.classList.remove(...inactiveClasses);
@@ -72,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             successMsg.classList.add('hidden');
             errorMsg.classList.add('hidden');
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            submitBtn.innerHTML = 'Sending...';
 
             // Gather Form Data
             const formData = new FormData(form);
