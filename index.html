@@ -243,26 +243,20 @@
       class="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-yellow-50 rounded-full blur-3xl opacity-60 -translate-x-1/4 translate-y-1/4">
     </div>
 
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-12 text-center">
 
-      <!-- Left Text -->
-      <div class="text-center md:text-left animate-fade-up">
-        <div
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-8">
-          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-          <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Campaign 2026</span>
-        </div>
-
+      <!-- Text Section -->
+      <div class="animate-fade-up">
         <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-navy mb-6">
           Restoring Trust.<br>
           <span class="text-gradient-gold">Rebuilding Legacy.</span>
         </h1>
 
-        <p class="text-xl text-slate-600 font-medium leading-relaxed mb-10 max-w-lg mx-auto md:mx-0">
+        <p class="text-xl text-slate-600 font-medium leading-relaxed mb-10 max-w-lg mx-auto">
           Faithfully committed to a Lemon Grove that works for every resident—from the youngest to the wisest.
         </p>
 
-        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a href="/contact/"
             class="bg-navy hover:bg-navy-light text-white text-lg font-bold py-4 px-10 rounded-full shadow-xl shadow-navy/20 transition-all hover:scale-105">
             Join the Movement
@@ -274,8 +268,8 @@
         </div>
       </div>
 
-      <!-- Right Image Placeholder -->
-      <div class="relative h-[600px] w-full animate-fade-up delay-200 hidden md:block translate-y-8">
+      <!-- Center Image -->
+      <div class="relative h-[600px] w-full max-w-3xl animate-fade-up delay-200 hidden md:block translate-y-8">
         <div class="img-placeholder w-full h-full rounded-[2.5rem] shadow-glass">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764474108/Joep_portaits_wntumb.jpg"
             alt="Joe Smith Candidate Portrait">
@@ -289,6 +283,13 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Badge Section -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm animate-fade-up delay-300">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Lemon Grove City Council</span>
       </div>
 
     </div>
