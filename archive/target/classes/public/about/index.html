@@ -143,61 +143,53 @@
 
   <!-- NAV -->
   <!-- CORRECTED NAVIGATION FOR ALL PAGES -->
-  <!-- Replace the nav section in ALL your HTML files with this -->
+<!-- Replace the nav section in ALL your HTML files with this -->
 
-  <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3 group">
-        <div
-          class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
-          JS
-        </div>
-        <div class="flex flex-col">
-          <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
-          <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove Council</span>
-        </div>
+<nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
+        JS
+      </div>
+      <div class="flex flex-col">
+        <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
+        <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove Council</span>
+      </div>
+    </a>
+
+    <div class="hidden md:flex items-center gap-1">
+      <a href="/" class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Home</a>
+      <a href="/about/" class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
+      <a href="/experience/" class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
+      <a href="/contact/" class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
+    </div>
+
+    <div class="hidden md:flex items-center gap-4">
+      <a href="/contact/" class="bg-navy hover:bg-navy-light text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105 active:scale-95">
+        Join the Movement
       </a>
-
-      <div class="hidden md:flex items-center gap-1">
-        <a href="/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Home</a>
-        <a href="/about/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
-        <a href="/experience/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
-        <a href="/contact/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
-      </div>
-
-      <div class="hidden md:flex items-center gap-4">
-        <a href="/contact/"
-          class="bg-navy hover:bg-navy-light text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105 active:scale-95">
-          Join the Movement
-        </a>
-      </div>
-
-      <button class="md:hidden text-navy text-xl"
-        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-        <i class="fa-solid fa-bars"></i>
-      </button>
     </div>
 
-    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-gold to-navy"></div>
+    <button class="md:hidden text-navy text-xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  
+  <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-gold to-navy"></div>
 
-    <div id="mobile-menu"
-      class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
-      <a href="/" class="text-lg font-bold text-navy">Home</a>
-      <a href="/about/" class="text-lg font-medium text-slate-600">About</a>
-      <a href="/experience/" class="text-lg font-medium text-slate-600">Experience</a>
-      <a href="/contact/" class="text-lg font-medium text-slate-600">Contact</a>
-      <a href="/contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the Movement</a>
-    </div>
-  </nav>
+  <div id="mobile-menu" class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
+    <a href="/" class="text-lg font-bold text-navy">Home</a>
+    <a href="/about/" class="text-lg font-medium text-slate-600">About</a>
+    <a href="/experience/" class="text-lg font-medium text-slate-600">Experience</a>
+    <a href="/contact/" class="text-lg font-medium text-slate-600">Contact</a>
+    <a href="/contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the Movement</a>
+  </div>
+</nav>
 
-  <!-- CRITICAL: ALL links must end with / for clean URLs -->
-  <!-- Use /about/ NOT /about.html -->
-  <!-- Use /experience/ NOT /experience.html -->
-  <!-- Use /contact/ NOT /contact.html -->
+<!-- CRITICAL: ALL links must end with / for clean URLs -->
+<!-- Use /about/ NOT /about.html -->
+<!-- Use /experience/ NOT /experience.html -->
+<!-- Use /contact/ NOT /contact.html -->
 
   <!-- CONTENT -->
   <main class="pt-32 pb-20 px-6 flex-grow">
@@ -327,7 +319,8 @@
   <section class="py-16 px-6 relative z-10 border-t border-white/10">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-white mb-6">Join the Movement</h2>
-      <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+      <form action="https://formsubmit.co/info@joesmithofficial.com" method="POST"
+        class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
 
         <input type="email" name="email" placeholder="Email Address"
           class="flex-grow px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
@@ -376,8 +369,6 @@
     </div>
   </footer>
 
-  <!-- AJAX Form Logic -->
-  <script src="../script.js"></script>
 </body>
 
 </html>
