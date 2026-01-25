@@ -137,9 +137,6 @@
 <body class="text-slate-800 antialiased flex flex-col min-h-screen">
 
   <!-- NAV -->
-  <!-- CORRECTED NAVIGATION FOR ALL PAGES -->
-  <!-- Replace the nav section in ALL your HTML files with this -->
-
   <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
     <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3 group">
@@ -154,14 +151,14 @@
       </a>
 
       <div class="hidden md:flex items-center gap-1">
-        <a href="/" data-nav-item="home"
-          class="nav-link px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Home</a>
-        <a href="/about/" data-nav-item="about"
-          class="nav-link px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
-        <a href="/experience/" data-nav-item="experience"
-          class="nav-link px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
-        <a href="/contact/" data-nav-item="contact"
-          class="nav-link px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
+        <a href="/"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Home</a>
+        <a href="/about/"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
+        <a href="/experience/"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
+        <a href="/contact/"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
       </div>
 
       <div class="hidden md:flex items-center gap-4">
@@ -181,22 +178,15 @@
 
     <div id="mobile-menu"
       class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
-      <a href="/" data-nav-item-mobile="home" class="mobile-nav-link text-lg font-medium text-slate-600">Home</a>
-      <a href="/about/" data-nav-item-mobile="about"
-        class="mobile-nav-link text-lg font-medium text-slate-600">About</a>
-      <a href="/experience/" data-nav-item-mobile="experience"
-        class="mobile-nav-link text-lg font-medium text-slate-600">Experience</a>
-      <a href="/contact/" data-nav-item-mobile="contact"
-        class="mobile-nav-link text-lg font-medium text-slate-600">Contact</a>
+      <a href="/" class="text-lg font-bold text-navy">Home</a>
+      <a href="/about/" class="text-lg font-medium text-slate-600">About</a>
+      <a href="/experience/" class="text-lg font-medium text-slate-600">Experience</a>
+      <a href="/contact/" class="text-lg font-medium text-slate-600">Contact</a>
       <a href="/contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the Movement</a>
     </div>
   </nav>
 
-
   <!-- CRITICAL: ALL links must end with / for clean URLs -->
-  <!-- Use /about/ NOT /about.html -->
-  <!-- Use /experience/ NOT /experience.html -->
-  <!-- Use /contact/ NOT /contact.html -->
 
   <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto flex-grow w-full">
 
@@ -351,30 +341,28 @@
     </div>
   </main>
 
-  <!-- JOIN THE MOVEMENT FORM (Updated to use Shared JS) -->
-  <section id="join" class="py-24 px-6 relative z-10">
+  <!-- JOIN THE MOVEMENT -->
+  <section class="py-16 px-6 relative z-10 border-t border-white/10">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Join the Movement</h2>
-      <p class="text-blue-100 text-xl mb-10">Sign up for updates on events, volunteer opportunities, and campaign news.
-      </p>
-
-      <form method="POST" action="https://formsubmit.co/d0c3aa9a8589f7452b449592aef75f90"
-        class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
-        <!-- FormSubmit Configuration -->
-        <input type="hidden" name="_subject" value="New Footer Signup">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+      <h2 class="text-3xl font-bold text-white mb-6">Join the Movement</h2>
+      <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
 
         <input type="email" name="email" placeholder="Email Address"
           class="flex-grow px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
-
         <input type="text" name="zip" placeholder="Zip Code"
           class="w-full md:w-40 px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
 
+        <!-- Hidden fields -->
+        <input type="hidden" name="_webhook" value="https://hook.us2.make.com/pwd19xc2dks5dujl6y12r1dgja6ur1db">
+        <input type="hidden" name="form_source" value="join_the_movement">
+        <input type="hidden" name="_subject" value="New JOIN THE MOVEMENT signup">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse"
+          value="Thank you for joining the movement! We will keep you updated on Joe Smith’s campaign.">
+        <input type="hidden" name="_captcha" value="false">
+
         <button type="submit"
-          class="bg-gold hover:bg-white hover:text-navy text-navy font-bold py-4 px-8 rounded-full shadow-lg transition-all transform hover:scale-105">
-          Join
-        </button>
+          class="bg-gold hover:bg-white hover:text-navy text-navy font-bold py-4 px-8 rounded-full shadow-lg transition-all transform hover:scale-105">Join</button>
       </form>
     </div>
   </section>
@@ -406,50 +394,8 @@
     </div>
   </footer>
 
-  <!-- SHARED LOGIC -->
+  <!-- AJAX Form Logic -->
   <script src="/css/js/script.js"></script>
-
-  <script>
-      (function () {
-        'use strict';
-
-        const currentPath = window.location.pathname;
-        let activePage = 'home';
-
-        if (currentPath.includes('/about')) {
-          activePage = 'about';
-        } else if (currentPath.includes('/experience')) {
-          activePage = 'experience';
-        } else if (currentPath.includes('/contact')) {
-          activePage = 'contact';
-        }
-
-        const desktopLinks = document.querySelectorAll('.nav-link');
-        desktopLinks.forEach(link => {
-          link.classList.remove('text-navy', 'bg-navy/5', 'hover:bg-navy/10');
-          link.classList.add('text-slate-500', 'hover:text-navy', 'hover:bg-gray-50');
-        });
-
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-        mobileLinks.forEach(link => {
-          link.classList.remove('text-navy', 'font-bold');
-          link.classList.add('text-slate-600', 'font-medium');
-        });
-
-        const activeDesktopLink = document.querySelector(`[data-nav-item="${activePage}"]`);
-        if (activeDesktopLink) {
-          activeDesktopLink.classList.remove('text-slate-500', 'hover:text-navy', 'hover:bg-gray-50');
-          activeDesktopLink.classList.add('text-navy', 'bg-navy/5', 'hover:bg-navy/10');
-        }
-
-        const activeMobileLink = document.querySelector(`[data-nav-item-mobile="${activePage}"]`);
-        if (activeMobileLink) {
-          activeMobileLink.classList.remove('text-slate-600', 'font-medium');
-          activeMobileLink.classList.add('text-navy', 'font-bold');
-        }
-      })();
-  </script>
-
 </body>
 
 </html>
