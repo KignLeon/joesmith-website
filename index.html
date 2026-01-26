@@ -244,52 +244,42 @@
       class="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-yellow-50 rounded-full blur-3xl opacity-60 -translate-x-1/4 translate-y-1/4">
     </div>
 
-    <!-- Responsive Grid: 1 Col on Mobile, 2 Cols on Desktop -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Responsive Grid: Mobile Stacking vs Desktop Split -->
+    <!-- Mobile (<md): Flex Column (Text -> Image -> Badge) -->
+    <!-- Desktop (>=md): Grid with managed areas -->
+    <div class="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center gap-10">
 
-      <!-- LEFT COLUMN GROUP (Desktop) / SPLIT ORDER ITEMS (Mobile) -->
-      <!-- 'contents' allows children to be direct grid items on mobile for ordering -->
-      <!-- 'md:flex' groups them back into a column on desktop for tight spacing/alignment -->
-      <div class="contents md:flex md:flex-col md:gap-10 md:items-start text-center md:text-left">
+      <!-- 1. TEXT GROUP -->
+      <!-- Mobile: Order 1 (Natural) -->
+      <!-- Desktop: Left Column (Row 1) -->
+      <div class="w-full flex flex-col gap-8 items-center md:items-start text-center md:text-left animate-fade-up">
 
-        <!-- 1. TEXT GROUP (Mobile: Order 1) -->
-        <div class="order-1 w-full animate-fade-up flex flex-col gap-8 items-center md:items-start">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-navy">
+          Restoring Trust.<br>
+          <span class="text-gradient-gold">Rebuilding Legacy.</span>
+        </h1>
 
-          <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-navy">
-            Restoring Trust.<br>
-            <span class="text-gradient-gold">Rebuilding Legacy.</span>
-          </h1>
+        <p class="text-xl text-slate-600 font-medium leading-relaxed max-w-lg">
+          Faithfully committed to a Lemon Grove that works for every resident—from the youngest to the wisest.
+        </p>
 
-          <p class="text-xl text-slate-600 font-medium leading-relaxed max-w-lg">
-            Faithfully committed to a Lemon Grove that works for every resident—from the youngest to the wisest.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
-            <a href="/contact/"
-              class="bg-navy hover:bg-navy-light text-white text-lg font-bold py-4 px-10 rounded-full shadow-xl shadow-navy/20 transition-all hover:scale-105 text-center">
-              Join the Movement
-            </a>
-            <a href="/about/"
-              class="glass-panel text-navy hover:bg-white text-lg font-bold py-4 px-10 rounded-full transition-all hover:shadow-lg text-center">
-              Meet Joe Smith
-            </a>
-          </div>
-
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
+          <a href="/contact/"
+            class="bg-navy hover:bg-navy-light text-white text-lg font-bold py-4 px-10 rounded-full shadow-xl shadow-navy/20 transition-all hover:scale-105 text-center">
+            Join the Movement
+          </a>
+          <a href="/about/"
+            class="glass-panel text-navy hover:bg-white text-lg font-bold py-4 px-10 rounded-full transition-all hover:shadow-lg text-center">
+            Meet Joe Smith
+          </a>
         </div>
-
-        <!-- 3. BADGE (Mobile: Order 3) -->
-        <div class="order-3 w-full animate-fade-up delay-300 flex justify-center md:justify-start">
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Lemon Grove City Council</span>
-          </div>
-        </div>
-
       </div>
 
-      <!-- 2. IMAGE (Mobile: Order 2) -->
-      <!-- Right Column on Desktop -->
-      <div class="order-2 relative w-full h-[500px] md:h-[700px] animate-fade-up delay-200">
+      <!-- 2. IMAGE GROUP -->
+      <!-- Mobile: Order 2 (Natural) -->
+      <!-- Desktop: Right Column, Spans 2 Rows to cover Text + Badge height -->
+      <div
+        class="relative w-full h-[500px] md:h-[700px] animate-fade-up delay-200 md:col-start-2 md:row-start-1 md:row-span-2">
         <div class="img-placeholder w-full h-full rounded-[2.5rem] shadow-glass relative">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764474108/Joep_portaits_wntumb.jpg"
             alt="Joe Smith Candidate Portrait">
@@ -303,6 +293,16 @@
               <p class="text-navy font-bold">Joe Smith</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- 3. BADGE GROUP -->
+      <!-- Mobile: Order 3 (Natural) -->
+      <!-- Desktop: Left Column, Row 2 (Below Text) -->
+      <div class="w-full flex justify-center md:justify-start animate-fade-up delay-300 md:col-start-1 md:row-start-2">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Lemon Grove City Council</span>
         </div>
       </div>
 
