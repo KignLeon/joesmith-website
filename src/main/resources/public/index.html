@@ -248,15 +248,15 @@
     </div>
 
     <!-- Responsive Grid: Mobile Stacking vs Desktop Split -->
-    <!-- Mobile (<md): Flex Column (1. Text -> 2. Image -> 3. Badge) -->
+    <!-- Mobile (<md): Flex Column (1. Image -> 2. Text -> 3. Badge) -->
     <!-- Desktop (>=md): Grid with managed areas -->
     <div class="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center gap-10">
 
       <!-- 1. TEXT GROUP -->
-      <!-- Mobile: Order 1 -->
+      <!-- Mobile: Order 2 (Second) -->
       <!-- Desktop: Left Column (Row 1) -->
       <div
-        class="order-1 w-full flex flex-col gap-8 items-center md:items-start text-center md:text-left animate-fade-up">
+        class="order-2 w-full flex flex-col gap-8 items-center md:items-start text-center md:text-left animate-fade-up">
 
         <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-navy">
           Restoring Trust.<br>
@@ -280,10 +280,10 @@
       </div>
 
       <!-- 2. IMAGE GROUP -->
-      <!-- Mobile: Order 2 -->
+      <!-- Mobile: Order 1 (First - Dominant) -->
       <!-- Desktop: Right Column, Spans 2 Rows to cover Text + Badge height -->
       <div
-        class="order-2 relative w-full h-[500px] md:h-[700px] animate-fade-up delay-200 md:col-start-2 md:row-start-1 md:row-span-2">
+        class="order-1 relative w-full h-[500px] md:h-[700px] animate-fade-up delay-200 md:col-start-2 md:row-start-1 md:row-span-2">
         <div class="img-placeholder w-full h-full rounded-[2.5rem] shadow-glass relative">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764474108/Joep_portaits_wntumb.jpg"
             alt="Joe Smith Candidate Portrait">
@@ -301,7 +301,7 @@
       </div>
 
       <!-- 3. BADGE GROUP -->
-      <!-- Mobile: Order 3 -->
+      <!-- Mobile: Order 3 (Bottom) -->
       <!-- Desktop: Left Column, Row 2 (Below Text) -->
       <div
         class="order-3 w-full flex justify-center md:justify-start animate-fade-up delay-300 md:col-start-1 md:row-start-2">
