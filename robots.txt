@@ -8,4 +8,4 @@ Allow: /
 Disallow: /assets/private/
 
 # Sitemap location
-Sitemap: https://www.joesmithforlemongrove.com/sitemap.xml
+Sitemap: https://www.joesmithofficial.com/sitemap.xml
