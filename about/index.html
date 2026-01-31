@@ -142,7 +142,6 @@
 
 <body class="text-slate-800 antialiased selection:bg-gold selection:text-white flex flex-col min-h-screen">
 
-  <!-- NAV -->
   <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
     <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
       <a href="./" class="flex items-center gap-3 group">
@@ -157,14 +156,20 @@
       </a>
 
       <div class="hidden md:flex items-center gap-1">
-        <a href="./"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Home</a>
-        <a href="about/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
-        <a href="experience/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
-        <a href="contact/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
+        <a href="./" data-nav-item="home"
+          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Home</a>
+        <a href="about/" data-nav-item="about"
+          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
+        <a href="./#platform" data-nav-item="platform"
+          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Platform</a>
+        <a href="meet-the-team/" data-nav-item="meet"
+          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Meet
+          the Team</a>
+        <a href="donate/" data-nav-item="donate"
+          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Donate</a>
+        <a href="contact/" data-nav-item="contact"
+          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact
+          Volunteer</a>
       </div>
 
       <div class="hidden md:flex items-center gap-4">
@@ -184,10 +189,16 @@
 
     <div id="mobile-menu"
       class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
-      <a href="./" class="text-lg font-bold text-navy">Home</a>
-      <a href="about/" class="text-lg font-medium text-slate-600">About</a>
-      <a href="experience/" class="text-lg font-medium text-slate-600">Experience</a>
-      <a href="contact/" class="text-lg font-medium text-slate-600">Contact</a>
+      <a href="./" data-nav-item-mobile="home" class="mobile-nav-link text-lg font-medium text-slate-600">Home</a>
+      <a href="about/" data-nav-item-mobile="about" class="mobile-nav-link text-lg font-medium text-slate-600">About</a>
+      <a href="./#platform" data-nav-item-mobile="platform"
+        class="mobile-nav-link text-lg font-medium text-slate-600">Platform</a>
+      <a href="meet-the-team/" data-nav-item-mobile="meet"
+        class="mobile-nav-link text-lg font-medium text-slate-600">Meet the Team</a>
+      <a href="donate/" data-nav-item-mobile="donate"
+        class="mobile-nav-link text-lg font-medium text-slate-600">Donate</a>
+      <a href="contact/" data-nav-item-mobile="contact"
+        class="mobile-nav-link text-lg font-medium text-slate-600">Contact Volunteer</a>
       <a href="contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the Movement</a>
     </div>
   </nav>
@@ -218,7 +229,8 @@
             </p>
             <p class="text-slate-600 mb-6">
               Guided by <strong>faith, integrity, and a commitment to excellence</strong>, Joe is a father on a mission,
-              showing up with passion, purpose, and a "whatever it takes" mindset. Now residing in San Diego, Joe brings
+              showing up with passion, purpose, and a "whatever it takes" mindset. Now residing in Lemon Grove, Joe
+              brings
               a statewide perspective gained from serving communities across northern, central, and southern California.
             </p>
             <p class="text-slate-600">
@@ -276,15 +288,15 @@
         <div class="grid md:grid-cols-2 gap-8">
           <div class="glass-panel rounded-3xl p-8">
             <h3 class="text-xl font-bold text-navy mb-4 flex items-center gap-2">
-              <i class="fa-solid fa-bullhorn text-gold"></i> Speaking & Facilitation
+              <i class="fa-solid fa-bullhorn text-gold"></i> Servant Leadership
             </h3>
-            <p class="text-slate-600 mb-4">Joe's background includes roles as a senior trainer, community relations
+            <p class="text-slate-600 mb-4">Joe’s background includes roles as a senior trainer, community relations
               facilitator, school district consultant, and public speaker. He specializes in:</p>
             <ul class="list-disc list-inside text-slate-600 space-y-2 ml-2">
-              <li>Front Line & Classified Staff PD</li>
+              <li>Youth Development and Youth Engagement</li>
               <li>Stakeholder Focus Groups</li>
-              <li>Youth Development / Student Success</li>
-              <li>Teacher & Admin Trainings (Capacity Building)</li>
+              <li>Capacity Building</li>
+              <li>Parent and Family Leadership</li>
               <li>African American Student Achievement Initiatives</li>
               <li>Restorative Justice & Parent Advisory</li>
             </ul>
@@ -300,9 +312,9 @@
               <li><strong>Member:</strong> Alpha Phi Alpha Fraternity, Inc.</li>
               <li><strong>Mentor:</strong> Helix Charter High & Morse High</li>
               <li><strong>Council Member:</strong> SDCOE Black Advisory Council</li>
-              <li><strong>Community Organizer:</strong> Hurricane Katrina Relief</li>
-              <li><strong>Board Member:</strong> Airport Little League & AYSO Region 181</li>
-              <li><strong>Procession Director:</strong> Sacramento MLK 365</li>
+              <li><strong>Board Member:</strong> Skyline Youth Football</li>
+              <li><strong>Chair and Lead:</strong> MLK Weekend Annual Harmony Health Festival</li>
+              <li><strong>Lead:</strong> Harbor Dr.</li>
             </ul>
           </div>
         </div>
@@ -351,26 +363,44 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="pt-10 pb-10 px-6 mt-auto border-t border-white/10">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
       <div class="text-center md:text-left">
         <h2 class="text-3xl font-bold text-white tracking-tight">JOE SMITH</h2>
         <p class="text-blue-200 font-medium tracking-wide text-sm mt-1 uppercase">For Lemon Grove City Council</p>
+        <div class="mt-4 flex flex-col gap-2">
+          <a href="tel:6199926349"
+            class="text-white hover:text-gold transition-colors font-bold text-lg">619.992.6349</a>
+          <div class="flex gap-4 mt-2 justify-center md:justify-start">
+            <a href="contact/"
+              class="bg-gold text-navy font-bold py-2 px-6 rounded-full hover:bg-white transition-all shadow-lg text-sm">Join</a>
+            <a href="donate/"
+              class="bg-white text-navy font-bold py-2 px-6 rounded-full hover:bg-gold hover:text-white transition-all shadow-lg text-sm">Donate</a>
+          </div>
+        </div>
       </div>
-      <div class="flex gap-8">
-        <a href="./" class="text-blue-200 hover:text-white font-semibold transition-colors">Home</a>
-        <a href="about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
-        <a href="experience/" class="text-blue-200 hover:text-white font-semibold transition-colors">Experience</a>
-        <a href="contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact</a>
-      </div>
-      <div class="flex gap-4">
-        <a href="#"
-          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
-            class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/in/joe-smith4457" target="_blank"
-          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
-            class="fa-brands fa-linkedin-in"></i></a>
+      <div class="flex flex-col gap-4 items-center md:items-end">
+        <div class="flex gap-8">
+          <a href="./" class="text-blue-200 hover:text-white font-semibold transition-colors">Home</a>
+          <a href="about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
+          <a href="./#platform" class="text-blue-200 hover:text-white font-semibold transition-colors">Platform</a>
+          <a href="meet-the-team/" class="text-blue-200 hover:text-white font-semibold transition-colors">Meet the
+            Team</a>
+          <a href="donate/" class="text-blue-200 hover:text-white font-semibold transition-colors">Donate</a>
+          <a href="contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact
+            Volunteer</a>
+        </div>
+        <div class="flex gap-4">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+              class="fa-brands fa-tiktok"></i></a>
+        </div>
       </div>
     </div>
     <div class="text-center pt-10">
