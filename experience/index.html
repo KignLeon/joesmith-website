@@ -137,6 +137,7 @@
 
 <body class="text-slate-800 antialiased flex flex-col min-h-screen">
 
+  <!-- NAV -->
   <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
     <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
       <a href="./" class="flex items-center gap-3 group">
@@ -151,20 +152,14 @@
       </a>
 
       <div class="hidden md:flex items-center gap-1">
-        <a href="./" data-nav-item="home"
-          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Home</a>
-        <a href="about/" data-nav-item="about"
-          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
-        <a href="./#platform" data-nav-item="platform"
-          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Platform</a>
-        <a href="meet-the-team/" data-nav-item="meet"
-          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Meet
-          the Team</a>
-        <a href="donate/" data-nav-item="donate"
-          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Donate</a>
-        <a href="contact/" data-nav-item="contact"
-          class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact
-          Volunteer</a>
+        <a href="./"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Home</a>
+        <a href="about/"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
+        <a href="experience/"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
+        <a href="contact/"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
       </div>
 
       <div class="hidden md:flex items-center gap-4">
@@ -184,16 +179,10 @@
 
     <div id="mobile-menu"
       class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
-      <a href="./" data-nav-item-mobile="home" class="mobile-nav-link text-lg font-medium text-slate-600">Home</a>
-      <a href="about/" data-nav-item-mobile="about" class="mobile-nav-link text-lg font-medium text-slate-600">About</a>
-      <a href="./#platform" data-nav-item-mobile="platform"
-        class="mobile-nav-link text-lg font-medium text-slate-600">Platform</a>
-      <a href="meet-the-team/" data-nav-item-mobile="meet"
-        class="mobile-nav-link text-lg font-medium text-slate-600">Meet the Team</a>
-      <a href="donate/" data-nav-item-mobile="donate"
-        class="mobile-nav-link text-lg font-medium text-slate-600">Donate</a>
-      <a href="contact/" data-nav-item-mobile="contact"
-        class="mobile-nav-link text-lg font-medium text-slate-600">Contact Volunteer</a>
+      <a href="./" class="text-lg font-bold text-navy">Home</a>
+      <a href="about/" class="text-lg font-medium text-slate-600">About</a>
+      <a href="experience/" class="text-lg font-medium text-slate-600">Experience</a>
+      <a href="contact/" class="text-lg font-medium text-slate-600">Contact</a>
       <a href="contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the Movement</a>
     </div>
   </nav>
@@ -235,12 +224,12 @@
         <!-- Certifications -->
         <div class="glass-card p-8">
           <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
-              class="fa-solid fa-certificate text-gold"></i> Certifications</h3>
+              class="fa-solid fa-calendar-check text-gold"></i> Key Events</h3>
           <ul class="space-y-3 text-sm text-slate-600">
-            <li>• Moral Reconation Therapy</li>
-            <li>• Crisis Prevention Institute</li>
-            <li>• Anger Management Facilitator</li>
-            <li>• Coaching & Capacity Building</li>
+            <li>• Education Leadership Consulting</li>
+            <li>• MLK Weekend Annual Harmony Health Festival</li>
+            <li>• Annual Black History Celebration</li>
+            <li>• Annual Multicultural Fair, Family Day, and Chess Tournament</li>
           </ul>
         </div>
 
@@ -254,18 +243,6 @@
             <li>• Council Member, SDCOE Black Advisory Council</li>
             <li>• Board Member, Airport Little League</li>
             <li>• Community Organizer, Hurricane Katrina Relief</li>
-          </ul>
-        </div>
-
-        <!-- Events -->
-        <div class="glass-card p-8">
-          <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
-              class="fa-solid fa-calendar-check text-gold"></i> Key Events</h3>
-          <ul class="space-y-3 text-xs text-slate-600">
-            <li>• Education Leadership Consulting</li>
-            <li>• MLK Weekend Annual Harmony Health Festival</li>
-            <li>• Annual Black History Celebration</li>
-            <li>• Annual Multicultural Fair, Family Day, and Chess Tournament</li>
           </ul>
         </div>
 
@@ -293,8 +270,9 @@
               <h3 class="text-xl font-bold text-navy">Director, Family & Community Engagement</h3>
               <p class="text-sm font-semibold text-slate-400 mb-4">Lemon Grove School District | San Diego, CA</p>
               <p class="text-slate-600 leading-relaxed">
-                Faithfully committed to the community, bringing supportive community engagement, recreation, music
-                enrichment, to schools and more
+                Director
+                Faithfully committed to the community, bringing supportive community engagement, recreation, and music
+                enrichment to schools and neighborhoods.
               </p>
             </div>
           </div>
@@ -400,39 +378,23 @@
       <div class="text-center md:text-left">
         <h2 class="text-3xl font-bold text-white tracking-tight">JOE SMITH</h2>
         <p class="text-blue-200 font-medium tracking-wide text-sm mt-1 uppercase">For Lemon Grove City Council</p>
-        <div class="mt-4 flex flex-col gap-2">
-          <a href="tel:6199926349"
-            class="text-white hover:text-gold transition-colors font-bold text-lg">619.992.6349</a>
-          <div class="flex gap-4 mt-2 justify-center md:justify-start">
-            <a href="contact/"
-              class="bg-gold text-navy font-bold py-2 px-6 rounded-full hover:bg-white transition-all shadow-lg text-sm">Join</a>
-            <a href="donate/"
-              class="bg-white text-navy font-bold py-2 px-6 rounded-full hover:bg-gold hover:text-white transition-all shadow-lg text-sm">Donate</a>
-          </div>
-        </div>
       </div>
-      <div class="flex flex-col gap-4 items-center md:items-end">
-        <div class="flex gap-8">
-          <a href="./" class="text-blue-200 hover:text-white font-semibold transition-colors">Home</a>
-          <a href="about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
-          <a href="./#platform" class="text-blue-200 hover:text-white font-semibold transition-colors">Platform</a>
-          <a href="meet-the-team/" class="text-blue-200 hover:text-white font-semibold transition-colors">Meet the
-            Team</a>
-          <a href="donate/" class="text-blue-200 hover:text-white font-semibold transition-colors">Donate</a>
-          <a href="contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact
-            Volunteer</a>
-        </div>
-        <div class="flex gap-4">
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
-              class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
-              class="fa-brands fa-instagram"></i></a>
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
-              class="fa-brands fa-tiktok"></i></a>
-        </div>
+      <div class="flex gap-8">
+        <a href="./" class="text-blue-200 hover:text-white font-semibold transition-colors">Home</a>
+        <a href="about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
+        <a href="experience/" class="text-blue-200 hover:text-white font-semibold transition-colors">Experience</a>
+        <a href="contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact</a>
+      </div>
+      <div class="flex gap-4">
+        <a href="#"
+          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+            class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"
+          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="#"
+          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+            class="fa-brands fa-tiktok"></i></a>
       </div>
     </div>
     <div class="text-center pt-10">

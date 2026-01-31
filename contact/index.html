@@ -182,20 +182,14 @@
             </a>
 
             <div class="hidden md:flex items-center gap-1">
-                <a href="./" data-nav-item="home"
-                    class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Home</a>
-                <a href="about/" data-nav-item="about"
-                    class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
-                <a href="./#platform" data-nav-item="platform"
-                    class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Platform</a>
-                <a href="meet-the-team/" data-nav-item="meet"
-                    class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Meet
-                    the Team</a>
-                <a href="donate/" data-nav-item="donate"
-                    class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Donate</a>
-                <a href="contact/" data-nav-item="contact"
-                    class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact
-                    Volunteer</a>
+                <a href="./"
+                    class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Home</a>
+                <a href="about/"
+                    class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
+                <a href="experience/"
+                    class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
+                <a href="contact/"
+                    class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
             </div>
 
             <div class="hidden md:flex items-center gap-4">
@@ -215,17 +209,10 @@
 
         <div id="mobile-menu"
             class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
-            <a href="./" data-nav-item-mobile="home" class="mobile-nav-link text-lg font-medium text-slate-600">Home</a>
-            <a href="about/" data-nav-item-mobile="about"
-                class="mobile-nav-link text-lg font-medium text-slate-600">About</a>
-            <a href="./#platform" data-nav-item-mobile="platform"
-                class="mobile-nav-link text-lg font-medium text-slate-600">Platform</a>
-            <a href="meet-the-team/" data-nav-item-mobile="meet"
-                class="mobile-nav-link text-lg font-medium text-slate-600">Meet the Team</a>
-            <a href="donate/" data-nav-item-mobile="donate"
-                class="mobile-nav-link text-lg font-medium text-slate-600">Donate</a>
-            <a href="contact/" data-nav-item-mobile="contact"
-                class="mobile-nav-link text-lg font-medium text-slate-600">Contact Volunteer</a>
+            <a href="./" class="text-lg font-bold text-navy">Home</a>
+            <a href="about/" class="text-lg font-medium text-slate-600">About</a>
+            <a href="experience/" class="text-lg font-medium text-slate-600">Experience</a>
+            <a href="contact/" class="text-lg font-medium text-slate-600">Contact</a>
             <a href="contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold mt-2">Join the
                 Movement</a>
         </div>
@@ -334,73 +321,48 @@
     <section class="py-16 px-6 relative z-10 border-t border-white/10">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-white mb-6">Join the Movement</h2>
-            <form class="grid md:grid-cols-2 gap-4 max-w-xl mx-auto">
-                <input type="text" name="name" placeholder="Full Name"
-                    class="w-full px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
-
-                <input type="tel" name="phone" placeholder="Phone Number"
-                    class="w-full px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
-
-                <input type="email" name="email" placeholder="Email Address"
-                    class="w-full px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
-
-                <input type="text" name="zip" placeholder="Zip Code"
-                    class="w-full px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
-
-                <!-- Hidden fields -->
-                <input type="hidden" name="form_source" value="join_the_movement">
-                <input type="hidden" name="_subject" value="New JOIN THE MOVEMENT signup">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_autoresponse"
-                    value="Thank you for joining the movement! We will keep you updated on Joe Smith’s campaign.">
-                <input type="hidden" name="_captcha" value="false">
-
-                <button type="submit"
-                    class="md:col-span-2 bg-gold hover:bg-white hover:text-navy text-navy font-bold py-4 px-8 rounded-full shadow-lg transition-all transform hover:scale-105">Join</button>
-            </form>
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="contact/"
+                    class="bg-gold text-navy font-bold py-4 px-10 rounded-full hover:bg-white transition-all shadow-lg hover:scale-105">
+                    Join
+                </a>
+                <a href="donate/"
+                    class="bg-white text-navy font-bold py-4 px-10 rounded-full hover:bg-gold hover:text-white transition-all shadow-lg hover:scale-105">
+                    Donate
+                </a>
+                <a href="meet-the-team/"
+                    class="glass-panel text-white border-white/30 font-bold py-4 px-10 rounded-full hover:bg-white hover:text-navy transition-all shadow-lg hover:scale-105">
+                    Meet the Team
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="pt-10 pb-10 px-6 mt-auto border-t border-white/10">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div class="text-center md:text-left">
                 <h2 class="text-3xl font-bold text-white tracking-tight">JOE SMITH</h2>
                 <p class="text-blue-200 font-medium tracking-wide text-sm mt-1 uppercase">For Lemon Grove City Council
                 </p>
-                <div class="mt-4 flex flex-col gap-2">
-                    <a href="tel:6199926349"
-                        class="text-white hover:text-gold transition-colors font-bold text-lg">619.992.6349</a>
-                    <div class="flex gap-4 mt-2 justify-center md:justify-start">
-                        <a href="contact/"
-                            class="bg-gold text-navy font-bold py-2 px-6 rounded-full hover:bg-white transition-all shadow-lg text-sm">Join</a>
-                        <a href="donate/"
-                            class="bg-white text-navy font-bold py-2 px-6 rounded-full hover:bg-gold hover:text-white transition-all shadow-lg text-sm">Donate</a>
-                    </div>
-                </div>
             </div>
-            <div class="flex flex-col gap-4 items-center md:items-end">
-                <div class="flex gap-8">
-                    <a href="./" class="text-blue-200 hover:text-white font-semibold transition-colors">Home</a>
-                    <a href="about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
-                    <a href="./#platform"
-                        class="text-blue-200 hover:text-white font-semibold transition-colors">Platform</a>
-                    <a href="meet-the-team/" class="text-blue-200 hover:text-white font-semibold transition-colors">Meet
-                        the Team</a>
-                    <a href="donate/" class="text-blue-200 hover:text-white font-semibold transition-colors">Donate</a>
-                    <a href="contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact
-                        Volunteer</a>
-                </div>
-                <div class="flex gap-4">
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
-                            class="fa-brands fa-tiktok"></i></a>
-                </div>
+            <div class="flex gap-8">
+                <a href="./" class="text-blue-200 hover:text-white font-semibold transition-colors">Home</a>
+                <a href="about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
+                <a href="experience/"
+                    class="text-blue-200 hover:text-white font-semibold transition-colors">Experience</a>
+                <a href="contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact</a>
+            </div>
+            <div class="flex gap-4">
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+                        class="fa-brands fa-tiktok"></i></a>
             </div>
         </div>
         <div class="text-center pt-10">

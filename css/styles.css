@@ -1,11 +1,19 @@
-/* GLOBAL GRADIENT - Updated per request */
+/* GLOBAL GRADIENT - Updated for Campaign Consistency */
+:root {
+    --navy: #0A2342;
+    --gold: #D4AF37;
+    --red: #C41E3A;
+    /* Campaign Red Accent */
+    --white: #FFFFFF;
+}
+
 body {
-    /* Gold at very top (0-15%), fading to white, then to navy at bottom */
+    /* Updated Gradient: Gold top, fading to White, grounding in Navy */
     background: linear-gradient(to bottom,
-            #D4AF37 0%,
-            #ffffff 15%,
-            #ffffff 45%,
-            #0A2342 100%);
+            var(--gold) 0%,
+            var(--white) 15%,
+            var(--white) 55%,
+            var(--navy) 100%);
     background-attachment: scroll;
     min-height: 100vh;
 }
