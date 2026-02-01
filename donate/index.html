@@ -94,31 +94,72 @@
             </div>
 
             <h1 class="text-4xl md:text-5xl font-bold text-navy mb-6">Invest in Our Future</h1>
-            <p class="text-xl text-slate-600 mb-10 leading-relaxed">
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
                 Your contribution helps us reach every neighbor in Lemon Grove. Join us in building a campaign that
                 truly represents our community.
             </p>
 
-            <div class="grid md:grid-cols-3 gap-6 mb-10">
-                <button class="glass-card p-6 hover:border-gold transition-all group">
-                    <span class="block text-2xl font-bold text-navy group-hover:text-gold">$25</span>
-                    <span class="text-sm text-slate-500">Contributor</span>
-                </button>
-                <button
-                    class="glass-card p-6 border-gold/50 bg-gold/5 hover:bg-gold/10 transition-all group scale-105 shadow-glow">
-                    <span class="block text-2xl font-bold text-navy group-hover:text-gold">$50</span>
-                    <span class="text-sm text-slate-500">Supporter</span>
-                </button>
-                <button class="glass-card p-6 hover:border-gold transition-all group">
-                    <span class="block text-2xl font-bold text-navy group-hover:text-gold">$100</span>
-                    <span class="text-sm text-slate-500">Champion</span>
-                </button>
-            </div>
+            <form class="max-w-xl mx-auto space-y-6 text-left">
+                <!-- Contact Details -->
+                <div class="space-y-4">
+                    <input type="text" name="name" placeholder="Full Name"
+                        class="w-full px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
+                    <input type="email" name="email" placeholder="Email Address"
+                        class="w-full px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
+                    <input type="tel" name="phone" placeholder="Phone Number"
+                        class="w-full px-6 py-4 rounded-full input-glass text-lg placeholder-slate-500" required>
+                </div>
 
-            <a href="https://www.facebook.com/LinebackerDad1/" target="_blank"
-                class="inline-block bg-navy hover:bg-navy-light text-white text-xl font-bold py-4 px-12 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105">
-                Donate Securely
-            </a>
+                <!-- Pledge Amount -->
+                <div class="bg-white/40 p-6 rounded-[1.5rem] border border-white/50">
+                    <label class="block text-navy font-bold mb-4 text-center text-lg">Select Pledge Amount</label>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="pledge_amount" value="25" class="peer sr-only">
+                            <div
+                                class="glass-card py-3 px-2 text-center rounded-xl peer-checked:bg-gold peer-checked:text-white peer-checked:border-gold transition-all">
+                                $25</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="pledge_amount" value="50" class="peer sr-only">
+                            <div
+                                class="glass-card py-3 px-2 text-center rounded-xl peer-checked:bg-gold peer-checked:text-white peer-checked:border-gold transition-all">
+                                $50</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="pledge_amount" value="100" class="peer sr-only">
+                            <div
+                                class="glass-card py-3 px-2 text-center rounded-xl peer-checked:bg-gold peer-checked:text-white peer-checked:border-gold transition-all">
+                                $100</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="pledge_amount" value="other" class="peer sr-only"
+                                onclick="document.getElementById('custom-amount').focus()">
+                            <div
+                                class="glass-card py-3 px-2 text-center rounded-xl peer-checked:bg-gold peer-checked:text-white peer-checked:border-gold transition-all">
+                                Other</div>
+                        </label>
+                    </div>
+                    <input type="number" id="custom-amount" name="custom_pledge_amount" placeholder="Custom Amount ($)"
+                        class="w-full px-6 py-3 rounded-full input-glass text-lg placeholder-slate-500">
+                </div>
+
+                <!-- Optional Message -->
+                <textarea name="message" rows="3" placeholder="Optional Message or Comment"
+                    class="w-full px-6 py-4 rounded-3xl input-glass text-lg placeholder-slate-500 hidden"></textarea>
+
+                <!-- Hidden fields -->
+                <input type="hidden" name="form_source" value="donate_pledge">
+                <input type="hidden" name="_subject" value="New Donation Pledge">
+                <input type="hidden" name="_captcha" value="false">
+
+                <button type="submit"
+                    class="w-full bg-navy hover:bg-navy-light text-white text-xl font-bold py-4 px-12 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105">
+                    Submit Pledge
+                </button>
+            </form>
+
+
 
             <p class="text-sm text-slate-400 mt-8">
                 Contributions are not tax deductible. California law requires us to use our best efforts to collect and
@@ -161,6 +202,8 @@
         </div>
     </footer>
 
+    <!-- AJAX Form Logic -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
