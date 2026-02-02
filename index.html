@@ -198,23 +198,20 @@
           class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Home</a>
         <a href="about/"
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
+        <a href="./#platform"
+          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Platform</a>
         <a href="meet-the-team/"
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Meet
           the Team</a>
-        <a href="experience/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
-        <a href="contact/"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
       </div>
 
-      <div class="hidden md:flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-6">
         <a href="donate/"
-          class="bg-white text-navy border border-navy hover:bg-navy hover:text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg transition-all hover:scale-105 active:scale-95">
+          class="bg-navy hover:bg-navy-light text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105 active:scale-95">
           Donate
         </a>
-        <a href="contact/"
-          class="bg-navy hover:bg-navy-light text-white text-sm font-bold py-3 px-8 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105 active:scale-95">
-          Join the Movement
+        <a href="contact/" class="text-sm font-bold text-navy hover:text-gold transition-colors">
+          Contact
         </a>
       </div>
 
@@ -230,12 +227,11 @@
       class="hidden md:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
       <a href="./" class="text-lg font-bold text-navy">Home</a>
       <a href="about/" class="text-lg font-medium text-slate-600">About</a>
+      <a href="./#platform" class="text-lg font-medium text-slate-600">Platform</a>
       <a href="meet-the-team/" class="text-lg font-medium text-slate-600">Meet the Team</a>
-      <a href="experience/" class="text-lg font-medium text-slate-600">Experience</a>
-      <a href="contact/" class="text-lg font-medium text-slate-600">Contact</a>
       <div class="flex flex-col gap-3 mt-2">
-        <a href="donate/" class="bg-white text-navy border border-navy text-center py-3 rounded-xl font-bold">Donate</a>
-        <a href="contact/" class="bg-navy text-white text-center py-3 rounded-xl font-bold">Join the Movement</a>
+        <a href="donate/" class="bg-navy text-white text-center py-3 rounded-xl font-bold">Donate</a>
+        <a href="contact/" class="text-center py-2 font-bold text-navy">Contact</a>
       </div>
     </div>
   </nav>
@@ -298,8 +294,11 @@
       <!-- Desktop: Right Column, Spans 2 Rows to cover Text + Badge height -->
       <div
         class="order-1 relative w-full h-[500px] md:h-[700px] animate-fade-up delay-200 md:col-start-2 md:row-start-1 md:row-span-2">
-        <div class="img-placeholder w-full h-full rounded-[2.5rem] shadow-glass relative">
-          <img src="images/campaign-sign.png" alt="Joe Smith Campaign Sign">
+        <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl h-full w-full group">
+          <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764474108/Joep_portaits_wntumb.jpg"
+            alt="Joe Smith Portrait"
+            class="absolute w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
         </div>
         <div
           class="absolute bottom-10 left-6 md:-left-6 glass-panel p-4 rounded-2xl shadow-xl animate-bounce duration-[3000ms]">
@@ -403,14 +402,6 @@
           <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Helix High</span>
         </div>
 
-        <!-- Org 12: San Diego COE -->
-        <div
-          class="glass-panel px-6 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
-          <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764478267/district-header-logo_yiklrl.svg"
-            alt="SDCOE Logo" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm">SDCOE</span>
-        </div>
-
         <!-- Org 13: Alameda Fathers Corp -->
         <div
           class="glass-panel px-6 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
@@ -457,7 +448,7 @@
   </section>
 
   <!-- PRIORITIES GRID -->
-  <section class="py-24 px-6 relative">
+  <section id="platform" class="py-24 px-6 relative">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-navy mb-4">The Platform</h2>
