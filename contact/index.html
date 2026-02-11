@@ -167,20 +167,22 @@
 
     <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-3 group">
-                <div
-                    class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
-                    JS
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
-                    <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove
-                        Council</span>
-                </div>
-            </a>
-            <a href="/donate/"
-                class="bg-gold hover:bg-navy text-white text-sm font-bold py-2 px-6 rounded-full shadow-md transition-all hover:scale-105 ml-2">Donate</a>
+        <div class="max-w-7xl mx-auto px-6 h-20 flex md:grid md:grid-cols-[1fr_auto_1fr] items-center">
+            <div class="flex items-center gap-3">
+                <a href="/" class="flex items-center gap-3 group">
+                    <div
+                        class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
+                        JS
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
+                        <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove
+                            Council</span>
+                    </div>
+                </a>
+                <a href="/donate/"
+                    class="bg-gold hover:bg-navy text-white text-sm font-bold py-2 px-6 rounded-full shadow-md transition-all hover:scale-105 ml-2">Donate</a>
+            </div>
 
             <div class="hidden md:flex items-center gap-1">
                 <a href="/"
@@ -196,10 +198,12 @@
                     class="px-5 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Contact</a>
             </div>
 
-            <button class="md:hidden text-navy text-xl"
-                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="flex items-center justify-end ml-auto md:ml-0">
+                <button class="md:hidden text-navy text-xl"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
 
         <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-gold to-navy"></div>
@@ -230,6 +234,11 @@
                     <h1 class="text-5xl font-bold text-navy tracking-tight">Get Involved</h1>
                     <p class="text-xl text-slate-500 leading-relaxed mt-4">Whether you want to volunteer, host a yard
                         sign, or just share your thoughts, we want to hear from you.</p>
+                    <div class="mt-6">
+                        <a href="/donate/"
+                            class="bg-gold hover:bg-navy text-white text-lg font-bold py-3 px-8 rounded-full shadow-lg shadow-gold/20 transition-all hover:scale-105 inline-flex items-center gap-2"><i
+                                class="fa-solid fa-heart text-sm"></i> Donate Now</a>
+                    </div>
 
                     <div class="img-placeholder h-[250px] w-full rounded-3xl shadow-sm mt-8 mb-8">
                         <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764474124/Team_community_olcru5.heic"
@@ -373,6 +382,12 @@
         </div>
         <div class="text-center pt-10">
             <p class="text-blue-400 text-sm">&copy; Paid for by Joe Smith for Lemon Grove City Council 2026</p>
+            <a href="https://www.lovoson.com" target="_blank"
+                class="inline-flex items-center gap-2 text-blue-400/60 hover:text-white text-xs transition-colors mt-3">
+                <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770280276/lovoson_icon_svg_dxrbpw.svg"
+                    alt="Lovoson" class="h-4 w-4 opacity-60">
+                Designed by Lovoson Media
+            </a>
         </div>
     </footer>
 

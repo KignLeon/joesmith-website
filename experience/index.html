@@ -138,19 +138,21 @@
 
   <!-- NAV -->
   <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3 group">
-        <div
-          class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
-          JS
-        </div>
-        <div class="flex flex-col">
-          <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
-          <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove Council</span>
-        </div>
-      </a>
-      <a href="/donate/"
-        class="bg-gold hover:bg-navy text-white text-sm font-bold py-2 px-6 rounded-full shadow-md transition-all hover:scale-105 ml-2">Donate</a>
+    <div class="max-w-7xl mx-auto px-6 h-20 flex md:grid md:grid-cols-[1fr_auto_1fr] items-center">
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-3 group">
+          <div
+            class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
+            JS
+          </div>
+          <div class="flex flex-col">
+            <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
+            <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove Council</span>
+          </div>
+        </a>
+        <a href="/donate/"
+          class="bg-gold hover:bg-navy text-white text-sm font-bold py-2 px-6 rounded-full shadow-md transition-all hover:scale-105 ml-2">Donate</a>
+      </div>
 
       <div class="hidden md:flex items-center gap-1">
         <a href="/"
@@ -166,10 +168,12 @@
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
       </div>
 
-      <button class="md:hidden text-navy text-xl"
-        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <div class="flex items-center justify-end ml-auto md:ml-0">
+        <button class="md:hidden text-navy text-xl"
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
 
     <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-gold to-navy"></div>
@@ -189,169 +193,204 @@
 
   <!-- CRITICAL: ALL links must end with / for clean URLs -->
 
-  <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto flex-grow w-full">
+  <main class="flex-grow w-full">
 
-    <div class="text-center mb-16">
-      <h1 class="text-4xl md:text-5xl font-bold text-navy mb-4">Track Record of Service</h1>
-      <p class="text-lg text-slate-500">15+ Years in Education, Community Organizing, and Leadership.</p>
-    </div>
-
-    <div class="grid lg:grid-cols-3 gap-8">
-
-      <!-- LEFT: Sidebar -->
-      <div class="lg:col-span-1 flex flex-col gap-6">
-        <!-- Skills -->
-        <div class="glass-card p-8">
-          <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
-              class="fa-solid fa-layer-group text-gold"></i> Core Skills</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Community
-              Engagement</span>
-            <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Youth
-              Development</span>
-            <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Crisis
-              Prevention</span>
-            <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Program Dev</span>
-            <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Strategic
-              Planning</span>
-            <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Collaborative
-              Teams</span>
-            <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Project
-              Management</span>
-            <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Servant
-              Leadership</span>
-          </div>
-        </div>
-
-        <!-- Certifications -->
-        <div class="glass-card p-8">
-          <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
-              class="fa-solid fa-calendar-check text-gold"></i> Key Events</h3>
-          <ul class="space-y-3 text-sm text-slate-600">
-            <li>• Education Leadership Consulting</li>
-            <li>• MLK Weekend Annual Harmony Health Festival</li>
-            <li>• Annual Black History Celebration</li>
-            <li>• Annual Multicultural Fair</li>
-            <li>• Family Day</li>
-            <li>• Chess Tournament</li>
-          </ul>
-        </div>
-
-        <!-- Volunteer -->
-        <div class="glass-card p-8">
-          <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
-              class="fa-solid fa-hand-holding-heart text-gold"></i> Volunteer Experience</h3>
-          <ul class="space-y-3 text-xs text-slate-600">
-            <li>• Member, Alpha Phi Alpha Fraternity, Inc.</li>
-            <li>• Mentor, Helix Charter High & Morse High</li>
-            <li>• Council Member, SDCOE Black Advisory Council</li>
-            <li>• Board Member, Airport Little League</li>
-            <li>• Community Organizer, Hurricane Katrina Relief</li>
-          </ul>
-        </div>
-
-        <!-- Board and Leadership Roles -->
-        <div class="glass-card p-8">
-          <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
-              class="fa-solid fa-users text-gold"></i> Board and Leadership Roles</h3>
-          <ul class="space-y-3 text-xs text-slate-600">
-            <li>• Board Member: Skyline Youth Football</li>
-            <li>• Chair or Lead: MLK Weekend Annual Harmony Health Festival Harbor Drive</li>
-            <li>• Sponsor or Organizer: Black History Month Celebration</li>
-            <li>• Organizer: Lemon Grove Multicultural Fair, Family Day, and Chess Tournament</li>
-          </ul>
-        </div>
-
-        <!-- NEW IMAGE PLACEHOLDER (Extending to align with bottom of right column) -->
-        <div class="img-placeholder flex-grow min-h-[200px] w-full rounded-[1.5rem] shadow-sm">
-          <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764474101/Joe_portrait2_bk441s.jpg"
-            alt="Joe Portrait">
-        </div>
+    <!-- HERO SECTION -->
+    <header class="relative pt-32 pb-16 md:pt-40 md:pb-20 px-6 overflow-hidden">
+      <div
+        class="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-white rounded-full blur-3xl opacity-30 translate-x-1/3 -translate-y-1/4">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-yellow-50 rounded-full blur-3xl opacity-60 -translate-x-1/4 translate-y-1/4">
       </div>
 
-      <!-- RIGHT: Timeline -->
-      <div class="lg:col-span-2 relative">
-        <div class="timeline-line hidden md:block"></div>
-
-        <div class="space-y-8">
-          <div class="relative md:pl-20">
-            <div
-              class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-navy text-white rounded-full items-center justify-center z-10 border-4 border-fuchsia-50 shadow-md text-xl">
-              <i class="fa-solid fa-briefcase"></i>
-            </div>
-            <div class="glass-card p-8">
-              <span
-                class="inline-block px-3 py-1 rounded-md bg-gold/10 text-gold text-xs font-bold uppercase mb-2">07/2022
-                to Current</span>
-              <h3 class="text-xl font-bold text-navy">Director, Family & Community Engagement</h3>
-              <p class="text-sm font-semibold text-slate-400 mb-4">Lemon Grove School District | San Diego, CA</p>
-              <p class="text-slate-600 leading-relaxed">
-                Faithfully committed to the community, bringing support through community engagement, recreation, music
-                enrichment, schools, and youth focused initiatives.
-              </p>
-            </div>
+      <div class="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center gap-10">
+        <!-- Text -->
+        <div
+          class="order-2 md:order-1 w-full flex flex-col gap-6 items-center md:items-start text-center md:text-left animate-fade-up">
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-navy">
+            Track Record of
+            <span class="text-gradient-gold">Service.</span>
+          </h1>
+          <p class="text-xl text-slate-600 font-medium leading-relaxed max-w-lg">15+ Years in Education, Community
+            Organizing, and Leadership.</p>
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
+            <a href="/donate/"
+              class="bg-gold hover:bg-navy text-white text-lg font-bold py-4 px-10 rounded-full shadow-xl shadow-gold/20 transition-all hover:scale-105 text-center">Donate
+              Now</a>
+            <a href="/contact/"
+              class="glass-panel text-navy hover:bg-white text-lg font-bold py-4 px-10 rounded-full transition-all hover:shadow-lg text-center">Get
+              Involved</a>
           </div>
+        </div>
 
-          <div class="relative md:pl-20">
-            <div
-              class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
-              <i class="fa-solid fa-school"></i>
-            </div>
-            <div class="glass-card p-8">
-              <span
-                class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2021
-                to 07/2022</span>
-              <h3 class="text-xl font-bold text-navy">Assistant Principal</h3>
-              <p class="text-sm font-semibold text-slate-400 mb-4">High Tech High Media Arts | San Diego, CA</p>
-            </div>
-          </div>
-
-          <div class="relative md:pl-20">
-            <div
-              class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
-              <i class="fa-solid fa-chalkboard-user"></i>
-            </div>
-            <div class="glass-card p-8">
-              <span
-                class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2019
-                to 07/2022</span>
-              <h3 class="text-xl font-bold text-navy">Senior Trainer</h3>
-              <p class="text-sm font-semibold text-slate-400 mb-4">Families In Schools | Los Angeles, CA</p>
-            </div>
-          </div>
-
-          <div class="relative md:pl-20">
-            <div
-              class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
-              <i class="fa-solid fa-building-columns"></i>
-            </div>
-            <div class="glass-card p-8">
-              <span
-                class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">08/2016
-                to 08/2019</span>
-              <h3 class="text-xl font-bold text-navy">District Representative, Family & Community Engagement</h3>
-              <p class="text-sm font-semibold text-slate-400 mb-4">Bakersfield City School District | Bakersfield, CA
-              </p>
-            </div>
-          </div>
-
-          <div class="relative md:pl-20">
-            <div
-              class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
-              <i class="fa-solid fa-child-reaching"></i>
-            </div>
-            <div class="glass-card p-8">
-              <span
-                class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2012
-                to 02/2015</span>
-              <h3 class="text-xl font-bold text-navy">Area Director</h3>
-              <p class="text-sm font-semibold text-slate-400 mb-4">Boys & Girls Clubs | Sacramento, CA</p>
-            </div>
+        <!-- Image -->
+        <div class="order-1 md:order-2 relative w-full h-[400px] md:h-[500px] animate-fade-up delay-200">
+          <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl h-full w-full group">
+            <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764474101/Joe_portrait2_bk441s.jpg"
+              alt="Joe Smith Portrait"
+              class="absolute w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/50 to-transparent"></div>
           </div>
         </div>
       </div>
+    </header>
 
-    </div>
+    <section class="px-6 pb-24 max-w-7xl mx-auto">
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- LEFT: Sidebar -->
+        <div class="lg:col-span-1 flex flex-col gap-6">
+          <!-- Skills -->
+          <div class="glass-card p-8">
+            <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
+                class="fa-solid fa-layer-group text-gold"></i> Core Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Community
+                Engagement</span>
+              <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Youth
+                Development</span>
+              <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Crisis
+                Prevention</span>
+              <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Program Dev</span>
+              <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Strategic
+                Planning</span>
+              <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Collaborative
+                Teams</span>
+              <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Project
+                Management</span>
+              <span class="px-3 py-1 bg-slate-100 rounded-lg text-xs font-semibold text-slate-600">Servant
+                Leadership</span>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="glass-card p-8">
+            <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
+                class="fa-solid fa-calendar-check text-gold"></i> Key Events</h3>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li>• Education Leadership Consulting</li>
+              <li>• MLK Weekend Annual Harmony Health Festival</li>
+              <li>• Annual Black History Celebration</li>
+              <li>• Annual Multicultural Fair</li>
+              <li>• Family Day</li>
+              <li>• Chess Tournament</li>
+            </ul>
+          </div>
+
+          <!-- Volunteer -->
+          <div class="glass-card p-8">
+            <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
+                class="fa-solid fa-hand-holding-heart text-gold"></i> Volunteer Experience</h3>
+            <ul class="space-y-3 text-xs text-slate-600">
+              <li>• Member, Alpha Phi Alpha Fraternity, Inc.</li>
+              <li>• Mentor, Helix Charter High & Morse High</li>
+              <li>• Council Member, SDCOE Black Advisory Council</li>
+              <li>• Board Member, Airport Little League</li>
+              <li>• Community Organizer, Hurricane Katrina Relief</li>
+            </ul>
+          </div>
+
+          <!-- Board and Leadership Roles -->
+          <div class="glass-card p-8">
+            <h3 class="font-bold text-navy text-lg mb-4 flex items-center gap-2"><i
+                class="fa-solid fa-users text-gold"></i> Board and Leadership Roles</h3>
+            <ul class="space-y-3 text-xs text-slate-600">
+              <li>• Board Member: Skyline Youth Football</li>
+              <li>• Chair or Lead: MLK Weekend Annual Harmony Health Festival Harbor Drive</li>
+              <li>• Sponsor or Organizer: Black History Month Celebration</li>
+              <li>• Organizer: Lemon Grove Multicultural Fair, Family Day, and Chess Tournament</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Timeline -->
+        <div class="lg:col-span-2 relative">
+          <div class="timeline-line hidden md:block"></div>
+
+          <div class="space-y-8">
+            <div class="relative md:pl-20">
+              <div
+                class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-navy text-white rounded-full items-center justify-center z-10 border-4 border-fuchsia-50 shadow-md text-xl">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <div class="glass-card p-8">
+                <span
+                  class="inline-block px-3 py-1 rounded-md bg-gold/10 text-gold text-xs font-bold uppercase mb-2">07/2022
+                  to Current</span>
+                <h3 class="text-xl font-bold text-navy">Director, Family & Community Engagement</h3>
+                <p class="text-sm font-semibold text-slate-400 mb-4">Lemon Grove School District | San Diego, CA</p>
+                <p class="text-slate-600 leading-relaxed">
+                  Faithfully committed to the community, bringing support through community engagement, recreation,
+                  music
+                  enrichment, schools, and youth focused initiatives.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative md:pl-20">
+              <div
+                class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div class="glass-card p-8">
+                <span
+                  class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2021
+                  to 07/2022</span>
+                <h3 class="text-xl font-bold text-navy">Assistant Principal</h3>
+                <p class="text-sm font-semibold text-slate-400 mb-4">High Tech High Media Arts | San Diego, CA</p>
+              </div>
+            </div>
+
+            <div class="relative md:pl-20">
+              <div
+                class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <div class="glass-card p-8">
+                <span
+                  class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2019
+                  to 07/2022</span>
+                <h3 class="text-xl font-bold text-navy">Senior Trainer</h3>
+                <p class="text-sm font-semibold text-slate-400 mb-4">Families In Schools | Los Angeles, CA</p>
+              </div>
+            </div>
+
+            <div class="relative md:pl-20">
+              <div
+                class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="glass-card p-8">
+                <span
+                  class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">08/2016
+                  to 08/2019</span>
+                <h3 class="text-xl font-bold text-navy">District Representative, Family & Community Engagement</h3>
+                <p class="text-sm font-semibold text-slate-400 mb-4">Bakersfield City School District | Bakersfield, CA
+                </p>
+              </div>
+            </div>
+
+            <div class="relative md:pl-20">
+              <div
+                class="hidden md:flex absolute left-0 top-0 h-14 w-14 bg-white text-navy rounded-full items-center justify-center z-10 border-4 border-slate-200 text-xl">
+                <i class="fa-solid fa-child-reaching"></i>
+              </div>
+              <div class="glass-card p-8">
+                <span
+                  class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-500 text-xs font-bold uppercase mb-2">07/2012
+                  to 02/2015</span>
+                <h3 class="text-xl font-bold text-navy">Area Director</h3>
+                <p class="text-sm font-semibold text-slate-400 mb-4">Boys & Girls Clubs | Sacramento, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <!-- JOIN THE MOVEMENT -->
@@ -402,6 +441,12 @@
     </div>
     <div class="text-center pt-10">
       <p class="text-blue-400 text-sm">&copy; Paid for by Joe Smith for Lemon Grove City Council 2026</p>
+      <a href="https://www.lovoson.com" target="_blank"
+        class="inline-flex items-center gap-2 text-blue-400/60 hover:text-white text-xs transition-colors mt-3">
+        <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770280276/lovoson_icon_svg_dxrbpw.svg"
+          alt="Lovoson" class="h-4 w-4 opacity-60">
+        Designed by Lovoson Media
+      </a>
     </div>
   </footer>
 
