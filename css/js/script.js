@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     // Success
-                    showSuccess(form, "Thank you — we’ll reach out shortly.");
+                    showSuccess(form, "We appreciate your support. A team member will be in touch.");
                     form.reset();
                     // Optionally hide success message after delay? 
                     // Keeping it visible per requirements ("Replace or disable submit button" is also an option, 
