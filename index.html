@@ -44,6 +44,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
 
   <!-- DESIGN CONFIG -->
   <script>
@@ -192,7 +193,7 @@
             <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove Council</span>
           </div>
         </a>
-        <a href="/donate/"
+        <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer"
           class="bg-gold hover:bg-navy text-white text-sm font-bold py-2 px-6 rounded-full shadow-md transition-all hover:scale-105 ml-2">Donate</a>
       </div>
 
@@ -228,7 +229,7 @@
       <a href="/meet-the-team/" class="text-lg font-medium text-slate-600">Meet the Team</a>
       <a href="/contact/" class="text-lg font-medium text-slate-600">Contact</a>
       <div class="flex flex-col gap-3 mt-2">
-        <a href="/donate/" class="bg-navy text-white text-center py-3 rounded-xl font-bold">Donate</a>
+        <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer" class="bg-navy text-white text-center py-3 rounded-xl font-bold">Donate</a>
       </div>
     </div>
   </nav>
@@ -273,8 +274,8 @@
         <p class="text-lg text-slate-500 italic">"I believe in a city that meets needs and works for its residents"</p>
 
         <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
-          <a href="/donate/"
-            class="bg-gold hover:bg-navy text-white text-lg font-bold py-4 px-10 rounded-full shadow-xl shadow-gold/20 transition-all hover:scale-105 text-center">
+          <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer"
+            class="btn-shiny-cta bg-gold hover:bg-navy text-white text-lg font-bold py-4 px-10 rounded-full shadow-xl shadow-gold/20 transition-all hover:scale-105 text-center">
             Donate Now
           </a>
           <a href="/contact/"
@@ -321,177 +322,158 @@
     </div>
   </header>
 
+  <!-- TESTIMONIAL AVATARS -->
+  <section class="testimonial-avatars">
+    <div class="section-inner">
+      <h2 class="section-heading">Trusted by Our Community</h2>
+      <p class="section-sub">See what supporters are saying.</p>
+
+      <!-- Avatar Row -->
+      <div class="avatar-row" id="avatarRow">
+        <button class="avatar-item active" data-index="0" aria-label="Read testimonial from Maria G." tabindex="0">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+            alt="Maria G." loading="lazy">
+        </button>
+        <button class="avatar-item" data-index="1" aria-label="Read testimonial from David R." tabindex="0">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+            alt="David R." loading="lazy">
+        </button>
+        <button class="avatar-item" data-index="2" aria-label="Read testimonial from Linda T." tabindex="0">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
+            alt="Linda T." loading="lazy">
+        </button>
+        <button class="avatar-item" data-index="3" aria-label="Read testimonial from James W." tabindex="0">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face"
+            alt="James W." loading="lazy">
+        </button>
+        <button class="avatar-item" data-index="4" aria-label="Read testimonial from Sandra K." tabindex="0">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face"
+            alt="Sandra K." loading="lazy">
+        </button>
+        <div class="avatar-count" aria-hidden="true">+12</div>
+      </div>
+
+      <!-- Testimonial Card -->
+      <div class="testimonial-card" id="testimonialCard">
+        <p class="testimonial-text" id="testimonialText">"Joe truly cares about our families. He's been at
+          every school board meeting, every community event. That's the kind of leader Lemon Grove needs."</p>
+        <p class="testimonial-author" id="testimonialAuthor">Maria G.</p>
+        <p class="testimonial-role" id="testimonialRole">Lemon Grove Resident & Parent</p>
+      </div>
+
+      <!-- Feedback Toggle -->
+      <button class="feedback-btn" id="feedbackToggle" aria-expanded="false" aria-controls="feedbackForm">
+        <i class="fa-solid fa-comment-dots"></i> Leave Feedback
+      </button>
+
+      <!-- Inline Feedback Form -->
+      <div class="feedback-form" id="feedbackForm" role="region" aria-label="Leave feedback">
+        <div class="feedback-form-inner">
+          <input type="text" id="feedbackName" placeholder="Your name (optional)" aria-label="Name">
+          <textarea id="feedbackComment" placeholder="Share your thoughts about the campaign..." aria-label="Comment"
+            rows="3"></textarea>
+          <button class="feedback-submit" id="feedbackSubmit" type="button">Submit Feedback</button>
+          <div class="feedback-success" id="feedbackSuccess">
+            <i class="fa-solid fa-check-circle"></i> Thank you for your feedback!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PARTNERS -->
   <section class="py-12 border-y border-navy/5 bg-white/40 backdrop-blur-sm">
     <div class="max-w-7xl mx-auto px-6">
       <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-10">A Record of Community
         Partnerships</p>
 
-      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
-
-        <!-- Lemon Grove SD -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+      <div class="partner-grid">
+        <div class="partner-item">
           <img src="https://3.files.edl.io/9138/23/08/03/171329-1f44fd5e-355e-4c76-a6e3-76a529b58f52.png"
-            alt="Lemon Grove SD" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Lemon Grove SD</span>
+            alt="Lemon Grove SD" loading="lazy">
         </div>
-
-        <!-- High Tech High -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://www.hightechhigh.org/wp-content/uploads/2025/07/070225_HTH_horizontal_fullcolor_RGB.svg"
-            alt="High Tech High" class="h-8 w-auto object-contain">
+            alt="High Tech High" loading="lazy">
         </div>
-
-        <!-- Families In Schools -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764349305/Families-In-Schools-logo_qjey4p.jpg"
-            alt="Families In Schools" class="h-10 w-auto object-contain rounded-full">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Families In Schools</span>
+            alt="Families In Schools" loading="lazy" style="border-radius: 6px;">
         </div>
-
-        <!-- First 5 California -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
-          <img src="https://www.ccfc.ca.gov/images/f5_v3_logo.png" alt="First 5 California"
-            class="h-10 w-auto object-contain">
+        <div class="partner-item">
+          <img src="https://www.ccfc.ca.gov/images/f5_v3_logo.png" alt="First 5 California" loading="lazy">
         </div>
-
-        <!-- Buttonwillow USD -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://cmsv2-assets.apptegy.net/uploads/467/logo/327/buttonwillowlogowhite_circle.png"
-            alt="Buttonwillow USD" class="h-10 w-auto object-contain bg-navy rounded-full p-1">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Buttonwillow USD</span>
+            alt="Buttonwillow USD" loading="lazy" style="background: #0A2342; border-radius: 50%; padding: 4px;">
         </div>
-
-        <!-- Oakland Unified -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img
             src="https://resources.finalsite.net/images/f_auto,q_auto/v1704927331/ousdorg/undkq5nf9lov4tlqnqam/colourlogo.png"
-            alt="Oakland USD" class="h-10 w-auto object-contain">
+            alt="Oakland USD" loading="lazy">
         </div>
-
-        <!-- CCEE -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
-          <img src="https://ccee-ca.org/wp-content/uploads/2022/04/download.png" alt="CCEE"
-            class="h-10 w-auto object-contain">
+        <div class="partner-item">
+          <img src="https://ccee-ca.org/wp-content/uploads/2022/04/download.png" alt="CCEE" loading="lazy">
         </div>
-
-        <!-- Twin Rivers USD -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://schoolmanager.s3.amazonaws.com/uploads/pictures/00a7c7279b6e47a98c8fa1712234cf5e.png"
-            alt="Twin Rivers USD" class="h-10 w-auto object-contain">
+            alt="Twin Rivers USD" loading="lazy">
         </div>
-
-        <!-- Helix High School -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img
             src="https://resources.finalsite.net/images/f_auto,q_auto/v1727858072/helixcharternet/umjpuknyiragodpn2a7u/helixhighlanders1.png"
-            alt="Helix High School" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Helix High</span>
+            alt="Helix High School" loading="lazy">
         </div>
-
-        <!-- First 5 Alameda -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img
             src="https://images.squarespace-cdn.com/content/v1/58ed2e62bf629a6ea09f336b/1713215003716-YM7KI9HAERMIWY6LBNVL/logo-first5.png?format=300w"
-            alt="First 5 Alameda" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">First 5 Alameda</span>
+            alt="First 5 Alameda" loading="lazy">
         </div>
-
-        <!-- Greenfield Union SD -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img
             src="https://bloximages.newyork1.vip.townnews.com/bakersfield.com/content/tncms/assets/v3/editorial/6/57/6573b43c-d1cd-11ea-b05f-9fa88e06ee0a/5f21c6c1dbcdd.image.png"
-            alt="Greenfield Union SD" class="h-10 w-auto object-contain">
+            alt="Greenfield Union SD" loading="lazy">
         </div>
-
-        <!-- Bakersfield City SD -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://upload.wikimedia.org/wikipedia/en/e/e4/Bakersfield_City_School_District_%28logo%29.png"
-            alt="Bakersfield City SD" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Bakersfield City SD</span>
+            alt="Bakersfield City SD" loading="lazy">
         </div>
-
-        <!-- Lemon Grove School District -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1764478267/district-header-logo_yiklrl.svg"
-            alt="Lemon Grove School District" class="h-10 w-auto object-contain">
+            alt="Lemon Grove School District" loading="lazy">
         </div>
-
-        <!-- AAA E -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770678906/image_r9iijc.png" alt="AAA E"
-            class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">AAA E</span>
+            loading="lazy">
         </div>
-
-        <!-- (Org 21 — logo only) -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770679038/image_bydjvk.png"
-            alt="Community Partner" class="h-10 w-auto object-contain">
+            alt="Community Partner" loading="lazy">
         </div>
-
-        <!-- Alameda County Fathers Corps -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770679054/image_brq3ao.png"
-            alt="Alameda County Fathers Corps" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Alameda County Fathers Corps</span>
+            alt="Alameda County Fathers Corps" loading="lazy">
         </div>
-
-        <!-- Panama – Buena Vista Union SD -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770679029/image_nfujn3.png"
-            alt="Panama – Buena Vista Union SD" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Panama – Buena Vista Union SD</span>
+            alt="Panama – Buena Vista Union SD" loading="lazy">
         </div>
-
-        <!-- Kearny Mesa High School District -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770679023/image_xx6zzr.png"
-            alt="Kearny Mesa High School District" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Kearny Mesa HSD</span>
+            alt="Kearny Mesa High School District" loading="lazy">
         </div>
-
-        <!-- Mount Miguel -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770679005/image_xnj60o.png" alt="Mount Miguel"
-            class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Mount Miguel</span>
+            loading="lazy">
         </div>
-
-        <!-- Kern Workforce Academy -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770773600/unnamed_v12s1j.png"
-            alt="Kern Workforce Academy" class="h-10 w-auto object-contain">
-          <span class="font-bold text-navy/80 text-sm hidden sm:inline-block">Kern Workforce Academy</span>
+            alt="Kern Workforce Academy" loading="lazy">
         </div>
-
-        <!-- Outlined Logo Partner -->
-        <div
-          class="glass-panel px-5 py-3 rounded-full flex items-center gap-3 hover:scale-105 transition-all cursor-default h-16">
+        <div class="partner-item">
           <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1770773602/unnamed-2_sevcqn.png"
-            alt="Community Partner" class="h-10 w-auto object-contain rounded-lg border-2 border-black/80">
+            alt="Community Partner" loading="lazy">
         </div>
-
       </div>
     </div>
   </section>
@@ -573,7 +555,7 @@
           class="bg-gold text-navy text-sm sm:text-base font-bold py-2.5 px-5 sm:py-4 sm:px-10 rounded-full hover:bg-white transition-all shadow-lg shadow-gold/20 hover:scale-105">
           Join
         </a>
-        <a href="/donate/"
+        <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer"
           class="bg-white text-navy text-sm sm:text-base font-bold py-2.5 px-5 sm:py-4 sm:px-10 rounded-full hover:bg-gold hover:text-white transition-all shadow-md hover:scale-105">
           Donate
         </a>
@@ -630,6 +612,92 @@
 
   <!-- AJAX Form Logic -->
   <script src="/css/js/script.js"></script>
+
+  <!-- Testimonial + Feedback Logic -->
+  <script>
+      (function () {
+        var testimonials = [
+          {
+            name: "Maria G.",
+            role: "Lemon Grove Resident & Parent",
+            text: "\"Joe truly cares about our families. He's been at every school board meeting, every community event. That's the kind of leader Lemon Grove needs.\""
+          },
+          {
+            name: "David R.",
+            role: "Local Business Owner",
+            text: "\"What impressed me most is Joe's commitment to fiscal responsibility. He asks the hard questions and follows through.\""
+          },
+          {
+            name: "Linda T.",
+            role: "Community Volunteer",
+            text: "\"I've worked alongside Joe on multiple community projects. His servant leadership style brings people together to get real things done.\""
+          },
+          {
+            name: "James W.",
+            role: "Retired Educator",
+            text: "\"Joe understands that investing in our schools is investing in our future. He's the advocate our children need on the council.\""
+          },
+          {
+            name: "Sandra K.",
+            role: "Neighborhood Organizer",
+            text: "\"Joe doesn't just show up during election season. He's been in our neighborhoods, listening, learning, and leading all year long.\""
+          }
+        ];
+
+        var textEl = document.getElementById('testimonialText');
+        var authorEl = document.getElementById('testimonialAuthor');
+        var roleEl = document.getElementById('testimonialRole');
+        var avatarBtns = document.querySelectorAll('#avatarRow .avatar-item');
+
+        avatarBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var idx = parseInt(btn.getAttribute('data-index'), 10);
+            var t = testimonials[idx];
+            if (!t) return;
+
+            avatarBtns.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+
+            textEl.style.opacity = '0';
+            setTimeout(function () {
+              textEl.textContent = t.text;
+              authorEl.textContent = t.name;
+              roleEl.textContent = t.role;
+              textEl.style.opacity = '1';
+            }, 200);
+          });
+        });
+
+        // Feedback form toggle
+        var toggleBtn = document.getElementById('feedbackToggle');
+        var feedbackForm = document.getElementById('feedbackForm');
+
+        toggleBtn.addEventListener('click', function () {
+          var isOpen = feedbackForm.classList.toggle('open');
+          toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Feedback submit
+        var submitBtn = document.getElementById('feedbackSubmit');
+        var successMsg = document.getElementById('feedbackSuccess');
+        var nameInput = document.getElementById('feedbackName');
+        var commentInput = document.getElementById('feedbackComment');
+
+        submitBtn.addEventListener('click', function () {
+          var name = nameInput.value.trim() || 'Anonymous';
+          var comment = commentInput.value.trim();
+          if (!comment) {
+            commentInput.focus();
+            return;
+          }
+          console.log('Feedback submitted:', { name: name, comment: comment });
+          nameInput.value = '';
+          commentInput.value = '';
+          successMsg.classList.add('show');
+          setTimeout(function () { successMsg.classList.remove('show'); }, 3000);
+        });
+      })();
+  </script>
 </body>
 
 </html>
