@@ -99,10 +99,44 @@
 
             <h1 class="text-4xl md:text-5xl font-bold text-navy mb-6">Support the Movement</h1>
             <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-                Your commitment helps strengthen outreach, engagement, and community centered initiatives.
+                Your contribution helps strengthen outreach, engagement, and community centered initiatives that serve every Lemon Grove resident.
             </p>
 
-            <form class="max-w-xl mx-auto space-y-6 text-left">
+            <!-- Quick Amount Links -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-xl mx-auto mb-8">
+                <a href="https://secure.actblue.com/donate/selectjoesmith?amount=25" target="_blank" rel="noopener noreferrer"
+                    class="glass-card py-4 px-2 text-center rounded-xl text-navy font-bold text-lg hover:bg-gold hover:text-white hover:border-gold transition-all cursor-pointer">$25</a>
+                <a href="https://secure.actblue.com/donate/selectjoesmith?amount=50" target="_blank" rel="noopener noreferrer"
+                    class="glass-card py-4 px-2 text-center rounded-xl text-navy font-bold text-lg hover:bg-gold hover:text-white hover:border-gold transition-all cursor-pointer">$50</a>
+                <a href="https://secure.actblue.com/donate/selectjoesmith?amount=100" target="_blank" rel="noopener noreferrer"
+                    class="glass-card py-4 px-2 text-center rounded-xl text-navy font-bold text-lg hover:bg-gold hover:text-white hover:border-gold transition-all cursor-pointer">$100</a>
+                <a href="https://secure.actblue.com/donate/selectjoesmith?amount=250" target="_blank" rel="noopener noreferrer"
+                    class="glass-card py-4 px-2 text-center rounded-xl text-navy font-bold text-lg hover:bg-gold hover:text-white hover:border-gold transition-all cursor-pointer">$250</a>
+            </div>
+
+            <!-- Primary Donate Button -->
+            <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer"
+                class="btn-shiny-cta inline-flex items-center gap-3 text-white text-xl font-bold py-5 px-14 rounded-full shadow-xl transition-all hover:scale-105 mb-4">
+                <i class="fa-solid fa-heart"></i> Donate Now via ActBlue
+            </a>
+
+            <p class="text-sm text-slate-500 mt-2 mb-8">You will be securely redirected to ActBlue to complete your donation.</p>
+
+            <!-- Alt Giving Options -->
+            <div class="bg-white/40 p-6 rounded-2xl border border-white/60 max-w-sm mx-auto mb-6">
+                <p class="text-xs font-bold uppercase text-slate-400 tracking-widest mb-3">Also Accept</p>
+                <div class="flex justify-center gap-6">
+                    <a href="https://www.venmo.com/u/SelectJoeSmith" target="_blank" rel="noopener noreferrer"
+                        class="flex flex-col items-center gap-1 text-navy hover:text-gold transition-colors">
+                        <i class="fa-brands fa-paypal text-2xl"></i>
+                        <span class="text-xs font-bold">Venmo</span>
+                        <span class="text-xs text-slate-500">@SelectJoeSmith</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PLACEHOLDER form tag removed - using ActBlue direct link instead -->
+            <div class="hidden"><!--form
                 <!-- Contact Details -->
                 <div class="space-y-4">
                     <input type="text" name="name" placeholder="Full Name"
@@ -160,12 +194,10 @@
                     class="w-full bg-navy hover:bg-navy-light text-white text-xl font-bold py-4 px-12 rounded-full shadow-lg shadow-navy/20 transition-all hover:scale-105">
                     Submit Pledge
                 </button>
-            </form>
+            </div><!-- end hidden placeholder -->
 
-
-
-            <p class="text-sm text-slate-400 mt-8">
-                Donors may contribute up to $2,000 dollars per election cycle.
+            <p class="text-sm text-slate-400 mt-4">
+                Donors may contribute up to <strong>$1,200</strong> per election cycle.
             </p>
             <p class="text-sm text-slate-400 mt-4">
                 Contributions are not tax deductible. California law requires us to use our best efforts to collect and
@@ -239,7 +271,7 @@
     </footer>
 
     <!-- AJAX Form Logic -->
-    <script src="js/script.js"></script>
+    <script src="/css/js/script.js"></script>
 </body>
 
 </html>
