@@ -134,3 +134,462 @@ textarea:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(10, 35, 66, 0.1);
 }
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* SHINY CTA BUTTON — Pure-CSS port of ShinyButton component     */
+/* Apply class="btn-shiny-cta" to primary CTA buttons only       */
+/* ═══════════════════════════════════════════════════════════════ */
+
+@property --shiny-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --shiny-angle-offset {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --shiny-percent {
+    syntax: "<percentage>";
+    initial-value: 5%;
+    inherits: false;
+}
+
+@property --shiny-shine {
+    syntax: "<color>";
+    initial-value: white;
+    inherits: false;
+}
+
+.btn-shiny-cta {
+    /* Brand-matched palette */
+    --shiny-bg: #0A2342;
+    --shiny-bg-subtle: #163A66;
+    --shiny-fg: #ffffff;
+    --shiny-highlight: #D4AF37;
+    --shiny-highlight-subtle: #e6c65c;
+    --shiny-duration: 3s;
+    --shiny-shadow-size: 2px;
+    --shiny-transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline-offset: 4px;
+    color: var(--shiny-fg) !important;
+    border: 1px solid transparent !important;
+    background:
+        linear-gradient(var(--shiny-bg), var(--shiny-bg)) padding-box,
+        conic-gradient(from calc(var(--shiny-angle) - var(--shiny-angle-offset)),
+            transparent,
+            var(--shiny-highlight) var(--shiny-percent),
+            var(--shiny-shine) calc(var(--shiny-percent) * 2),
+            var(--shiny-highlight) calc(var(--shiny-percent) * 3),
+            transparent calc(var(--shiny-percent) * 4)) border-box !important;
+    box-shadow: inset 0 0 0 1px var(--shiny-bg-subtle), 0 0 20px rgba(212, 175, 55, 0.15) !important;
+    transition: var(--shiny-transition);
+    transition-property: --shiny-angle-offset, --shiny-percent, --shiny-shine, transform, box-shadow;
+    animation: shiny-rotate var(--shiny-duration) linear infinite;
+}
+
+/* Dot-pattern overlay */
+.btn-shiny-cta::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: var(--shiny-shadow-size);
+    border-radius: inherit;
+    background: radial-gradient(circle at 2px 2px,
+            rgba(255, 255, 255, 0.35) 0.5px,
+            transparent 0) padding-box;
+    background-size: 4px 4px;
+    background-repeat: space;
+    mask-image: conic-gradient(from calc(var(--shiny-angle) + 45deg),
+            black,
+            transparent 10% 90%,
+            black);
+    -webkit-mask-image: conic-gradient(from calc(var(--shiny-angle) + 45deg),
+            black,
+            transparent 10% 90%,
+            black);
+    opacity: 0.4;
+    z-index: 0;
+    animation: shiny-rotate var(--shiny-duration) linear infinite;
+}
+
+/* Internal shimmer */
+.btn-shiny-cta::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(-50deg,
+            transparent,
+            var(--shiny-highlight),
+            transparent);
+    mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+    -webkit-mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+    opacity: 0.6;
+    z-index: 0;
+    animation: shiny-shimmer calc(var(--shiny-duration) * 1.5) linear infinite;
+}
+
+/* Keep text above effects */
+.btn-shiny-cta>*,
+.btn-shiny-cta>i {
+    position: relative;
+    z-index: 1;
+}
+
+/* Active press */
+.btn-shiny-cta:active {
+    transform: translateY(1px) !important;
+}
+
+/* Hover / Focus */
+.btn-shiny-cta:is(:hover, :focus-visible) {
+    --shiny-percent: 20%;
+    --shiny-angle-offset: 95deg;
+    --shiny-shine: var(--shiny-highlight-subtle);
+    box-shadow: inset 0 0 0 1px var(--shiny-bg-subtle), 0 0 30px rgba(212, 175, 55, 0.35) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Focus-visible ring */
+.btn-shiny-cta:focus-visible {
+    outline: 2px solid var(--shiny-highlight);
+    outline-offset: 4px;
+}
+
+/* Keyframes */
+@keyframes shiny-rotate {
+    to {
+        --shiny-angle: 360deg;
+    }
+}
+
+@keyframes shiny-shimmer {
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-shiny-cta,
+    .btn-shiny-cta::before,
+    .btn-shiny-cta::after {
+        animation: none !important;
+    }
+
+    .testimonial-avatars .avatar-item,
+    .testimonial-avatars .avatar-count {
+        transition: none !important;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* TESTIMONIAL AVATAR SECTION                                     */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.testimonial-avatars {
+    padding: 3rem 1.5rem 2.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+.testimonial-avatars .section-inner {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial-avatars .section-heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0A2342;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.02em;
+}
+
+.testimonial-avatars .section-sub {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+/* Avatar row */
+.testimonial-avatars .avatar-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+.testimonial-avatars .avatar-item {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.testimonial-avatars .avatar-item:not(:first-child) {
+    margin-left: -12px;
+}
+
+.testimonial-avatars .avatar-item:hover,
+.testimonial-avatars .avatar-item:focus-visible {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+    z-index: 10;
+}
+
+.testimonial-avatars .avatar-item.active {
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 2px #D4AF37, 0 4px 12px rgba(212, 175, 55, 0.25);
+    z-index: 11;
+}
+
+.testimonial-avatars .avatar-item:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+}
+
+.testimonial-avatars .avatar-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-avatars .avatar-count {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-left: -12px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease;
+}
+
+.testimonial-avatars .avatar-count:hover {
+    transform: translateY(-4px);
+}
+
+/* Testimonial card */
+.testimonial-avatars .testimonial-card {
+    margin-top: 1.5rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 1.25rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    min-height: 100px;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-avatars .testimonial-text {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.testimonial-avatars .testimonial-author {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0A2342;
+}
+
+.testimonial-avatars .testimonial-role {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Feedback button */
+.testimonial-avatars .feedback-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0A2342;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(10, 35, 66, 0.15);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.testimonial-avatars .feedback-btn:hover,
+.testimonial-avatars .feedback-btn:focus-visible {
+    background: #0A2342;
+    color: #ffffff;
+    border-color: #0A2342;
+}
+
+.testimonial-avatars .feedback-btn:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 3px;
+}
+
+/* Feedback form (inline expandable) */
+.testimonial-avatars .feedback-form {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+    margin-top: 0;
+}
+
+.testimonial-avatars .feedback-form.open {
+    max-height: 320px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.testimonial-avatars .feedback-form-inner {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(10, 35, 66, 0.1);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+}
+
+.testimonial-avatars .feedback-form input,
+.testimonial-avatars .feedback-form textarea {
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.85rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    color: #0A2342;
+    margin-bottom: 0.6rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-avatars .feedback-form input:focus,
+.testimonial-avatars .feedback-form textarea:focus {
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    outline: none;
+}
+
+.testimonial-avatars .feedback-form textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.testimonial-avatars .feedback-submit {
+    padding: 0.55rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: #0A2342;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.testimonial-avatars .feedback-submit:hover {
+    background: #D4AF37;
+}
+
+.testimonial-avatars .feedback-submit:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 3px;
+}
+
+.testimonial-avatars .feedback-success {
+    display: none;
+    padding: 0.75rem;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.5rem;
+    color: #166534;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.testimonial-avatars .feedback-success.show {
+    display: block;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* PARTNER GRID — Clean grid layout                               */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .partner-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .partner-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+.partner-grid .partner-item {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+}
+
+.partner-grid .partner-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: #D4AF37;
+}
+
+.partner-grid .partner-item img {
+    max-height: 44px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}

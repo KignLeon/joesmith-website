@@ -59,6 +59,26 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             border-color: #D4AF37;
         }
+
+        /* Photo fallback: shows initials if image fails to load */
+        .team-photo-wrap {
+            position: relative;
+        }
+        .team-photo-wrap img[data-fallback]::before {
+            content: attr(data-initials);
+        }
+        .photo-fallback {
+            display: none;
+            width: 128px;
+            height: 128px;
+            border-radius: 9999px;
+            background: #0A2342;
+            color: #D4AF37;
+            font-size: 2rem;
+            font-weight: 800;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 
@@ -136,12 +156,13 @@
             <h2 class="text-3xl font-bold text-navy mb-8">Leadership Team</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
             <!-- Team Member: Angelee -->
             <div class="glass-card rounded-[2rem] p-6 text-center group hover:border-gold transition-all">
-                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all">
+                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all bg-navy/10 flex items-center justify-center">
                     <img src="https://drive.google.com/thumbnail?id=12MrEZZfqskPb_5tJBU9kc4GaeMWBnFAC&sz=w320"
-                        alt="Angelee" class="w-full h-full object-cover object-top">
+                        alt="Angelee" class="w-full h-full object-cover object-top"
+                        onerror="this.style.display='none';this.parentElement.innerHTML='<span style=&quot;font-size:2rem;font-weight:800;color:#D4AF37;&quot;>A</span>';">
                 </div>
                 <h3 class="text-xl font-bold text-navy">Angelee</h3>
                 <p class="text-sm text-gold font-bold uppercase mb-4">Campaign Team</p>
@@ -152,9 +173,10 @@
 
             <!-- Team Member: Jahlil -->
             <div class="glass-card rounded-[2rem] p-6 text-center group hover:border-gold transition-all">
-                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all">
+                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all bg-navy/10 flex items-center justify-center">
                     <img src="https://drive.google.com/thumbnail?id=1hNJvdJaFoSvClZOqtDVMaFvCFMr0cY50&sz=w320"
-                        alt="Jahlil" class="w-full h-full object-cover object-top">
+                        alt="Jahlil" class="w-full h-full object-cover object-top"
+                        onerror="this.style.display='none';this.parentElement.innerHTML='<span style=&quot;font-size:2rem;font-weight:800;color:#D4AF37;&quot;>J</span>';">
                 </div>
                 <h3 class="text-xl font-bold text-navy">Jahlil</h3>
                 <p class="text-sm text-gold font-bold uppercase mb-4">Campaign Team</p>
@@ -165,9 +187,10 @@
 
             <!-- Team Member: Leon -->
             <div class="glass-card rounded-[2rem] p-6 text-center group hover:border-gold transition-all">
-                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all">
+                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all bg-navy/10 flex items-center justify-center">
                     <img src="https://drive.google.com/thumbnail?id=1kIh3jPxhRSv8GmmQy5I0D14wu89Lbm_k&sz=w320"
-                        alt="Leon" class="w-full h-full object-cover object-top">
+                        alt="Leon" class="w-full h-full object-cover object-top"
+                        onerror="this.style.display='none';this.parentElement.innerHTML='<span style=&quot;font-size:2rem;font-weight:800;color:#D4AF37;&quot;>L</span>';">
                 </div>
                 <h3 class="text-xl font-bold text-navy">Leon</h3>
                 <p class="text-sm text-gold font-bold uppercase mb-4">Webpage Consultant</p>
@@ -178,14 +201,39 @@
 
             <!-- Team Member: Wade -->
             <div class="glass-card rounded-[2rem] p-6 text-center group hover:border-gold transition-all">
-                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all">
+                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all bg-navy/10 flex items-center justify-center">
                     <img src="https://drive.google.com/thumbnail?id=1t2-yvbrQHHM4QNM7AlvBh4TvKB_G6EkX&sz=w320"
-                        alt="Wade" class="w-full h-full object-cover object-top">
+                        alt="Wade" class="w-full h-full object-cover object-top"
+                        onerror="this.style.display='none';this.parentElement.innerHTML='<span style=&quot;font-size:2rem;font-weight:800;color:#D4AF37;&quot;>W</span>';">
                 </div>
                 <h3 class="text-xl font-bold text-navy">Wade</h3>
                 <p class="text-sm text-gold font-bold uppercase mb-4">Assistant Treasurer</p>
                 <p class="text-slate-600 text-sm">
                     Building and maintaining relationships with community members, partners, and stakeholders.
+                </p>
+            </div>
+
+            <!-- Team Member: Raquel -->
+            <div class="glass-card rounded-[2rem] p-6 text-center group hover:border-gold transition-all">
+                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all bg-navy/10 flex items-center justify-center">
+                    <span style="font-size:2rem;font-weight:800;color:#D4AF37;">R</span>
+                </div>
+                <h3 class="text-xl font-bold text-navy">Raquel</h3>
+                <p class="text-sm text-gold font-bold uppercase mb-4">Campaign Team</p>
+                <p class="text-slate-600 text-sm">
+                    Supporting campaign outreach and helping connect residents with Joe's vision for Lemon Grove.
+                </p>
+            </div>
+
+            <!-- Team Member: Shaylene -->
+            <div class="glass-card rounded-[2rem] p-6 text-center group hover:border-gold transition-all">
+                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-md group-hover:shadow-glow transition-all bg-navy/10 flex items-center justify-center">
+                    <span style="font-size:2rem;font-weight:800;color:#D4AF37;">S</span>
+                </div>
+                <h3 class="text-xl font-bold text-navy">Shaylene</h3>
+                <p class="text-sm text-gold font-bold uppercase mb-4">Campaign Team</p>
+                <p class="text-slate-600 text-sm">
+                    Driving community engagement and amplifying Joe's message across Lemon Grove neighborhoods.
                 </p>
             </div>
         </div>
@@ -271,6 +319,9 @@
                 <a href="https://www.linkedin.com/in/joe-smith4457/" target="_blank"
                     class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
                         class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://linktr.ee/joesmithofficial" target="_blank" rel="noopener noreferrer"
+                    class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all" title="Linktree"><i
+                        class="fa-solid fa-tree"></i></a>
             </div>
         </div>
         <div class="text-center pt-10">
