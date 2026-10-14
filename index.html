@@ -47,6 +47,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/gallery.css">
 
   <!-- DESIGN CONFIG -->
   <script>
@@ -209,6 +210,7 @@
         <a href="/meet-the-team/"
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Meet
           the Team</a>
+        <a href="/endorsements/" class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Endorsements</a>
         <a href="/contact/"
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
       </div>
@@ -229,6 +231,7 @@
       <a href="/about/" class="text-lg font-medium text-slate-600">About</a>
       <a href="/experience/" class="text-lg font-medium text-slate-600">Experience</a>
       <a href="/meet-the-team/" class="text-lg font-medium text-slate-600">Meet the Team</a>
+        <a href="/endorsements/" class="text-lg font-medium text-slate-600">Endorsements</a>
       <a href="/contact/" class="text-lg font-medium text-slate-600">Contact</a>
       <div class="flex flex-col gap-3 mt-2">
         <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer" class="bg-navy text-white text-center py-3 rounded-xl font-bold">Donate</a>
@@ -515,6 +518,229 @@
     </div>
   </section>
 
+  <!-- ENDORSEMENTS -->
+  <section id="endorsements" class="py-20 relative reveal" aria-labelledby="endorsements-heading">
+    <div class="max-w-7xl mx-auto" data-carousel>
+      <div class="px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
+        <div>
+          <h2 id="endorsements-heading" class="text-4xl md:text-5xl font-bold text-navy">Endorsed By</h2>
+          <p class="text-slate-600 text-lg mt-3 max-w-xl">Elected leaders, first responders, labor, and Lemon Grove families who trust Joe to serve.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="button" id="endorse-prev" class="carousel-btn" data-carousel-prev aria-label="Previous endorsements"><i class="fa-solid fa-arrow-left"></i></button>
+          <button type="button" id="endorse-next" class="carousel-btn" data-carousel-next aria-label="Next endorsements"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="carousel-fade">
+        <div class="endorse-track" data-carousel-track>
+          <figure class="endorse-card " data-category="elected">
+            <button type="button" class="endorse-frame" id="home-endorse-as" aria-label="View endorsement from Alysson Snow">
+              <img src="/images/endorsements/cards/thumbs/endorse-as.jpg" data-full="/images/endorsements/cards/endorse-as.jpg"
+                data-lightbox="home-endorse" data-caption="Alysson Snow · Mayor of Lemon Grove" alt="Endorsement from Alysson Snow, Mayor of Lemon Grove" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">Alysson Snow</span>
+              <span class="block text-sm text-slate-500">Mayor of Lemon Grove</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="elected">
+            <button type="button" class="endorse-frame" id="home-endorse-akilah" aria-label="View endorsement from Dr. Akilah Weber Pierson">
+              <img src="/images/endorsements/cards/thumbs/endorse-akilah.jpg" data-full="/images/endorsements/cards/endorse-akilah.jpg"
+                data-lightbox="home-endorse" data-caption="Dr. Akilah Weber Pierson · California State Senator" alt="Endorsement from Dr. Akilah Weber Pierson, California State Senator" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">Dr. Akilah Weber Pierson</span>
+              <span class="block text-sm text-slate-500">California State Senator</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="elected">
+            <button type="button" class="endorse-frame" id="home-endorse-sharp-collins" aria-label="View endorsement from Dr. LaShae Sharp-Collins">
+              <img src="/images/endorsements/cards/thumbs/endorse-sharp-collins.jpg" data-full="/images/endorsements/cards/endorse-sharp-collins.jpg"
+                data-lightbox="home-endorse" data-caption="Dr. LaShae Sharp-Collins · Assemblymember, District 79" alt="Endorsement from Dr. LaShae Sharp-Collins, Assemblymember, District 79" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">Dr. LaShae Sharp-Collins</span>
+              <span class="block text-sm text-slate-500">Assemblymember, District 79</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="organizations">
+            <button type="button" class="endorse-frame" id="home-endorse-sdcdp" aria-label="View endorsement from San Diego County Democratic Party">
+              <img src="/images/endorsements/cards/thumbs/endorse-sdcdp.jpg" data-full="/images/endorsements/cards/endorse-sdcdp.jpg"
+                data-lightbox="home-endorse" data-caption="San Diego County Democratic Party · County Party" alt="Endorsement from San Diego County Democratic Party, County Party" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">San Diego County Democratic Party</span>
+              <span class="block text-sm text-slate-500">County Party</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="safety">
+            <button type="button" class="endorse-frame" id="home-endorse-logan" aria-label="View endorsement from Chief Robert Logan">
+              <img src="/images/endorsements/cards/thumbs/endorse-logan.jpg" data-full="/images/endorsements/cards/endorse-logan.jpg"
+                data-lightbox="home-endorse" data-caption="Chief Robert Logan · San Diego Fire Chief" alt="Endorsement from Chief Robert Logan, San Diego Fire Chief" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">Chief Robert Logan</span>
+              <span class="block text-sm text-slate-500">San Diego Fire Chief</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="safety">
+            <button type="button" class="endorse-frame" id="home-endorse-afl-cio" aria-label="View endorsement from San Diego &amp; Imperial Counties Labor Council">
+              <img src="/images/endorsements/cards/thumbs/endorse-afl-cio.jpg" data-full="/images/endorsements/cards/endorse-afl-cio.jpg"
+                data-lightbox="home-endorse" data-caption="San Diego &amp; Imperial Counties Labor Council · AFL-CIO" alt="Endorsement from San Diego &amp; Imperial Counties Labor Council, AFL-CIO" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">San Diego &amp; Imperial Counties Labor Council</span>
+              <span class="block text-sm text-slate-500">AFL-CIO</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="elected">
+            <button type="button" class="endorse-frame" id="home-endorse-dillard" aria-label="View endorsement from Patricia Dillard">
+              <img src="/images/endorsements/cards/thumbs/endorse-dillard.jpg" data-full="/images/endorsements/cards/endorse-dillard.jpg"
+                data-lightbox="home-endorse" data-caption="Patricia Dillard · La Mesa Mayor" alt="Endorsement from Patricia Dillard, La Mesa Mayor" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">Patricia Dillard</span>
+              <span class="block text-sm text-slate-500">La Mesa Mayor</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="safety">
+            <button type="button" class="endorse-frame" id="home-endorse-heartland" aria-label="View endorsement from Heartland Fire &amp; Rescue">
+              <img src="/images/endorsements/cards/thumbs/endorse-heartland.jpg" data-full="/images/endorsements/cards/endorse-heartland.jpg"
+                data-lightbox="home-endorse" data-caption="Heartland Fire &amp; Rescue · Fire Department" alt="Endorsement from Heartland Fire &amp; Rescue, Fire Department" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">Heartland Fire &amp; Rescue</span>
+              <span class="block text-sm text-slate-500">Fire Department</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="safety">
+            <button type="button" class="endorse-frame" id="home-endorse-afscme" aria-label="View endorsement from AFSCME Local 127">
+              <img src="/images/endorsements/cards/thumbs/endorse-afscme.jpg" data-full="/images/endorsements/cards/endorse-afscme.jpg"
+                data-lightbox="home-endorse" data-caption="AFSCME Local 127 · Lemon Grove City Employees" alt="Endorsement from AFSCME Local 127, Lemon Grove City Employees" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">AFSCME Local 127</span>
+              <span class="block text-sm text-slate-500">Lemon Grove City Employees</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="organizations">
+            <button type="button" class="endorse-frame" id="home-endorse-wfp" aria-label="View endorsement from California Working Families Party">
+              <img src="/images/endorsements/cards/thumbs/endorse-wfp.jpg" data-full="/images/endorsements/cards/endorse-wfp.jpg"
+                data-lightbox="home-endorse" data-caption="California Working Families Party · Statewide Party" alt="Endorsement from California Working Families Party, Statewide Party" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">California Working Families Party</span>
+              <span class="block text-sm text-slate-500">Statewide Party</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="organizations">
+            <button type="button" class="endorse-frame" id="home-endorse-east-county" aria-label="View endorsement from East County Democratic Club">
+              <img src="/images/endorsements/cards/thumbs/endorse-east-county.jpg" data-full="/images/endorsements/cards/endorse-east-county.jpg"
+                data-lightbox="home-endorse" data-caption="East County Democratic Club · Democratic Club" alt="Endorsement from East County Democratic Club, Democratic Club" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">East County Democratic Club</span>
+              <span class="block text-sm text-slate-500">Democratic Club</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="organizations">
+            <button type="button" class="endorse-frame" id="home-endorse-equality" aria-label="View endorsement from San Diego Democrats for Equality">
+              <img src="/images/endorsements/cards/thumbs/endorse-equality.jpg" data-full="/images/endorsements/cards/endorse-equality.jpg"
+                data-lightbox="home-endorse" data-caption="San Diego Democrats for Equality · Democratic Club" alt="Endorsement from San Diego Democrats for Equality, Democratic Club" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">San Diego Democrats for Equality</span>
+              <span class="block text-sm text-slate-500">Democratic Club</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="organizations">
+            <button type="button" class="endorse-frame" id="home-endorse-mlk" aria-label="View endorsement from Martin Luther King Jr. Democratic Club">
+              <img src="/images/endorsements/cards/thumbs/endorse-mlk.jpg" data-full="/images/endorsements/cards/endorse-mlk.jpg"
+                data-lightbox="home-endorse" data-caption="Martin Luther King Jr. Democratic Club · Democratic Club" alt="Endorsement from Martin Luther King Jr. Democratic Club, Democratic Club" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">Martin Luther King Jr. Democratic Club</span>
+              <span class="block text-sm text-slate-500">Democratic Club</span>
+            </figcaption>
+          </figure>
+          <figure class="endorse-card " data-category="community">
+            <button type="button" class="endorse-frame" id="home-endorse-families" aria-label="View endorsement from Many Lemon Grove Families">
+              <img src="/images/endorsements/cards/thumbs/endorse-families.jpg" data-full="/images/endorsements/cards/endorse-families.jpg"
+                data-lightbox="home-endorse" data-caption="Many Lemon Grove Families · Our Community" alt="Endorsement from Many Lemon Grove Families, Our Community" loading="lazy">
+            </button>
+            <figcaption class="mt-4 px-1">
+              <span class="block font-bold text-navy leading-snug">Many Lemon Grove Families</span>
+              <span class="block text-sm text-slate-500">Our Community</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 px-6">
+        <a href="/endorsements/" id="see-all-endorsements"
+          class="inline-flex items-center gap-2 bg-navy hover:bg-gold text-white font-bold py-3.5 px-8 rounded-full shadow-lg transition-all hover:scale-105">
+          See All Endorsements <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY PHOTOS -->
+  <section id="community" class="py-20 px-6 relative reveal" aria-labelledby="community-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 id="community-heading" class="text-4xl md:text-5xl font-bold text-navy mb-4">Out in the Community</h2>
+        <p class="text-slate-600 text-lg">Showing up for Lemon Grove, one neighbor at a time.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[230px] gap-4 md:gap-5">
+        <div class="col-span-2 row-span-2">
+          <button type="button" class="photo-tile" id="home-photo-1">
+            <img src="/images/community/gallery/thumbs/g-13-IMG_9490.jpg" data-full="/images/community/gallery/g-13-IMG_9490.jpg"
+              data-lightbox="home-community" alt="Joe Smith and supporters with Select Joe Smith signs at the Lemon Grove lemon" loading="lazy" style="object-position: center 60%;">
+            <span class="tile-cap">Rallying at the Big Lemon</span>
+          </button>
+        </div>
+        <div>
+          <button type="button" class="photo-tile" id="home-photo-2">
+            <img src="/images/community/gallery/thumbs/g-01-20261014_122025.jpg" data-full="/images/community/gallery/g-01-20261014_122025.jpg"
+              data-lightbox="home-community" alt="Volunteers waving Joe Smith campaign signs on a street corner" loading="lazy" style="object-position: center 50%;">
+            <span class="tile-cap">Sign waving with volunteers</span>
+          </button>
+        </div>
+        <div>
+          <button type="button" class="photo-tile" id="home-photo-3">
+            <img src="/images/community/gallery/thumbs/g-06-IMG_7923.jpg" data-full="/images/community/gallery/g-06-IMG_7923.jpg"
+              data-lightbox="home-community" alt="Joe Smith taking a selfie with supporters holding Select Joe Smith signs" loading="lazy" style="object-position: center 40%;">
+            <span class="tile-cap">Neighbors for Joe</span>
+          </button>
+        </div>
+        <div>
+          <button type="button" class="photo-tile" id="home-photo-4">
+            <img src="/images/community/gallery/thumbs/g-08-IMG_8851.jpg" data-full="/images/community/gallery/g-08-IMG_8851.jpg"
+              data-lightbox="home-community" alt="Joe Smith with community leaders at an evening event" loading="lazy" style="object-position: center 40%;">
+            <span class="tile-cap">Community leaders gathering</span>
+          </button>
+        </div>
+        <div>
+          <button type="button" class="photo-tile" id="home-photo-5">
+            <img src="/images/community/gallery/thumbs/g-05-IMG_6053.jpg" data-full="/images/community/gallery/g-05-IMG_6053.jpg"
+              data-lightbox="home-community" alt="Joe Smith at a voter registration booth" loading="lazy" style="object-position: center 40%;">
+            <span class="tile-cap">Voter registration outreach</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/about/#community-engagement" id="more-community-photos"
+          class="inline-flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors">
+          More community photos <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- PRIORITIES GRID -->
   <section id="platform" class="py-24 px-6 relative">
     <div class="max-w-7xl mx-auto">
@@ -605,6 +831,7 @@
         <a href="/about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
         <a href="/experience/" class="text-blue-200 hover:text-white font-semibold transition-colors">Experience</a>
         <a href="/meet-the-team/" class="text-blue-200 hover:text-white font-semibold transition-colors">Meet the Team</a>
+        <a href="/endorsements/" class="text-blue-200 hover:text-white font-semibold transition-colors">Endorsements</a>
         <a href="/contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact</a>
         <a href="/donate/" class="text-blue-200 hover:text-white font-semibold transition-colors">Donate</a>
       </div>
@@ -661,6 +888,7 @@
 
   <!-- AJAX Form Logic -->
   <script src="/css/js/script.js"></script>
+  <script src="/css/js/gallery.js" defer></script>
 </body>
 
 </html>

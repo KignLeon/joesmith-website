@@ -43,6 +43,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/gallery.css">
 
   <script>
     tailwind.config = {
@@ -169,6 +170,7 @@
         <a href="/meet-the-team/"
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Meet
           the Team</a>
+        <a href="/endorsements/" class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Endorsements</a>
         <a href="/contact/"
           class="px-5 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
       </div>
@@ -189,6 +191,7 @@
       <a href="/about/" class="text-lg font-bold text-navy">About</a>
       <a href="/experience/" class="text-lg font-medium text-slate-600">Experience</a>
       <a href="/meet-the-team/" class="text-lg font-medium text-slate-600">Meet the Team</a>
+        <a href="/endorsements/" class="text-lg font-medium text-slate-600">Endorsements</a>
       <a href="/contact/" class="text-lg font-medium text-slate-600">Contact</a>
       <div class="flex flex-col gap-3 mt-2">
         <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer" class="bg-navy text-white text-center py-3 rounded-xl font-bold">Donate</a>
@@ -265,23 +268,47 @@
       </div>
 
       <!-- COMMUNITY ENGAGEMENT SECTION -->
-      <div class="mb-16">
+      <div class="mb-16 scroll-mt-28" id="community-engagement">
         <h2 class="text-3xl font-bold text-navy mb-8 text-center">Community Engagement</h2>
 
         <!-- Community Images Grid -->
-        <div class="grid md:grid-cols-3 gap-6 mb-10">
-          <div class="img-placeholder h-64 rounded-3xl shadow-sm">
-            <img src="/images/community/community-1.jpg" loading="lazy"
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10">
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-1">
+            <img src="/images/community/community-1.jpg" data-lightbox="about-community" loading="lazy"
               alt="Joe Smith with local youth at a community field day" style="object-position: center 60%;">
-          </div>
-          <div class="img-placeholder h-64 rounded-3xl shadow-sm">
-            <img src="/images/community/community-3.jpg" loading="lazy"
+            <span class="tile-cap">Youth field day</span></button></div>
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-2">
+            <img src="/images/community/community-3.jpg" data-lightbox="about-community" loading="lazy"
               alt="Joe Smith speaking at Grossmont College" style="object-position: center 25%;">
-          </div>
-          <div class="img-placeholder h-64 rounded-3xl shadow-sm">
-            <img src="/images/community/community-2.jpg" loading="lazy"
+            <span class="tile-cap">Speaking at Grossmont College</span></button></div>
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-3">
+            <img src="/images/community/community-2.jpg" data-lightbox="about-community" loading="lazy"
               alt="Joe Smith with community supporters" style="object-position: center 35%;">
-          </div>
+            <span class="tile-cap">With local supporters</span></button></div>
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-4">
+            <img src="/images/community/gallery/thumbs/g-14-IMG_9492.jpg" data-full="/images/community/gallery/g-14-IMG_9492.jpg" data-lightbox="about-community" loading="lazy"
+              alt="Joe Smith with Lemon Grove families at the Big Lemon" style="object-position: center 55%;">
+            <span class="tile-cap">Families at the Big Lemon</span></button></div>
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-5">
+            <img src="/images/community/gallery/thumbs/g-07-IMG_8348.jpg" data-full="/images/community/gallery/g-07-IMG_8348.jpg" data-lightbox="about-community" loading="lazy"
+              alt="Joe Smith with kids holding Sweeten Lemon Grove petition flyers" style="object-position: center 30%;">
+            <span class="tile-cap">Sweeten Lemon Grove</span></button></div>
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-6">
+            <img src="/images/community/gallery/thumbs/g-03-IMG_3837.jpg" data-full="/images/community/gallery/g-03-IMG_3837.jpg" data-lightbox="about-community" loading="lazy"
+              alt="Joe Smith with two community members at a local business" style="object-position: center 25%;">
+            <span class="tile-cap">Supporting local business</span></button></div>
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-7">
+            <img src="/images/community/gallery/thumbs/g-10-IMG_9062.jpg" data-full="/images/community/gallery/g-10-IMG_9062.jpg" data-lightbox="about-community" loading="lazy"
+              alt="Joe Smith with a young family at a local restaurant" style="object-position: center 40%;">
+            <span class="tile-cap">Meeting young families</span></button></div>
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-8">
+            <img src="/images/community/gallery/thumbs/g-04-IMG_3838.jpg" data-full="/images/community/gallery/g-04-IMG_3838.jpg" data-lightbox="about-community" loading="lazy"
+              alt="Joe Smith taking a selfie with a longtime Lemon Grove resident" style="object-position: center 40%;">
+            <span class="tile-cap">Honoring our elders</span></button></div>
+          <div class="h-48 md:h-64"><button type="button" class="photo-tile" id="about-photo-9">
+            <img src="/images/community/gallery/thumbs/g-11-IMG_9068.jpg" data-full="/images/community/gallery/g-11-IMG_9068.jpg" data-lightbox="about-community" loading="lazy"
+              alt="Joe Smith with a local supporter holding a campaign card" style="object-position: center 30%;">
+            <span class="tile-cap">Building connections</span></button></div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
@@ -366,6 +393,7 @@
         <a href="/about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
         <a href="/experience/" class="text-blue-200 hover:text-white font-semibold transition-colors">Experience</a>
         <a href="/meet-the-team/" class="text-blue-200 hover:text-white font-semibold transition-colors">Meet the Team</a>
+        <a href="/endorsements/" class="text-blue-200 hover:text-white font-semibold transition-colors">Endorsements</a>
         <a href="/contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact</a>
         <a href="/donate/" class="text-blue-200 hover:text-white font-semibold transition-colors">Donate</a>
       </div>
@@ -419,6 +447,7 @@
 
   <!-- AJAX Form Logic -->
   <script src="/css/js/script.js"></script>
+  <script src="/css/js/gallery.js" defer></script>
 </body>
 
 </html>
