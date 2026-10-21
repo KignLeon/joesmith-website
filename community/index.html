@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Gallery | Joe Smith for Lemon Grove City Council</title>
+
+  <!-- SEO META -->
+  <meta name="description"
+    content="Photos of Joe Smith out in the Lemon Grove community: local businesses, neighborhood events, schools, and volunteers.">
+  <meta name="keywords"
+    content="Joe Smith, Lemon Grove, City Council, Election 2024, LinebackerDad, Community, Infrastructure, Homelessness">
+  <meta name="author" content="Joe Smith Campaign">
+  <link rel="canonical" href="https://www.joesmithofficial.com/community/">
+
+  <!-- OPEN GRAPH / TWITTER -->
+  <meta property="og:title" content="Community Gallery | Joe Smith for Lemon Grove City Council">
+  <meta property="og:description"
+    content="Joe Smith out in the Lemon Grove community.">
+  <meta property="og:image"
+    content="https://www.joesmithofficial.com/images/community/gallery/g-13-IMG_9490.jpg">
+  <meta property="og:url" content="https://www.joesmithofficial.com/community/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- SCHEMA.ORG -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Joe Smith",
+      "jobTitle": "Candidate for Lemon Grove City Council",
+      "url": "https://www.joesmithofficial.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/joe-smith4457",
+        "https://www.facebook.com/selectjoesmith",
+        "https://www.instagram.com/linebackerdad",
+        "https://linktr.ee/joesmithofficial",
+        "https://www.joesmithofficial.com"
+      ]
+    }
+  </script>
+
+  <!-- IMPORTS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/gallery.css">
+
+  <!-- DESIGN CONFIG -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0A2342',
+            gold: '#D4AF37',
+            'navy-light': '#163A66',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+            'glow': '0 0 20px rgba(212, 175, 55, 0.3)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* GLOBAL GRADIENT - Updated per request */
+    body {
+      /* Gold at very top (0-15%), fading to white, then to navy at bottom */
+      background: linear-gradient(to bottom,
+          #D4AF37 0%,
+          #ffffff 15%,
+          #ffffff 45%,
+          #0A2342 100%);
+      background-attachment: scroll;
+      min-height: 100vh;
+    }
+
+    /* LIQUID GLASS EFFECT */
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      /* border-bottom removed to allow gradient strip to shine */
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      border-color: #D4AF37;
+    }
+
+    .input-glass {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #0A2342;
+    }
+
+    .input-glass:focus {
+      background: #ffffff;
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.3);
+    }
+
+    /* IMAGE PLACEHOLDER STYLE */
+    .img-placeholder {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Adjusted to ensure head isn't cropped - centering it better */
+      object-position: 50% 15%;
+    }
+
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #D4AF37 0%, #B59020 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+  </style>
+</head>
+
+<body class="text-slate-800 antialiased selection:bg-gold selection:text-white flex flex-col min-h-screen">
+
+  <!-- FLOATING NAV -->
+  <!-- CORRECTED NAVIGATION FOR ALL PAGES -->
+  <!-- Replace the nav section in ALL your HTML files with this -->
+
+  <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300 relative">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center">
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-3 group">
+          <div
+            class="h-10 w-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg font-bold shadow-lg group-hover:bg-gold transition-colors duration-300">
+            JS
+          </div>
+          <div class="flex flex-col">
+            <span class="text-navy font-bold text-lg leading-none tracking-tight">JOE SMITH</span>
+            <span class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Lemon Grove Council</span>
+          </div>
+        </a>
+        <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer"
+          class="bg-gold hover:bg-navy text-white text-sm font-bold py-2 px-6 rounded-full shadow-md transition-all hover:scale-105 ml-2">Donate</a>
+      </div>
+
+      <div class="hidden xl:flex items-center gap-0.5 xl:translate-x-4">
+        <a href="/"
+          class="px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Home</a>
+        <a href="/about/"
+          class="px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">About</a>
+        <a href="/experience/"
+          class="px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Experience</a>
+        <a href="/meet-the-team/"
+          class="px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Meet
+          the Team</a>
+        <a href="/endorsements/" class="px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Endorsements</a>
+        <a href="/community/" class="px-4 py-2 rounded-full text-sm font-semibold text-navy bg-navy/5 hover:bg-navy/10 transition-all">Community</a>
+        <a href="/contact/"
+          class="px-4 py-2 rounded-full text-sm font-semibold text-slate-500 hover:text-navy hover:bg-gray-50 transition-all">Contact</a>
+      </div>
+
+      <div class="flex items-center justify-end ml-auto xl:ml-0">
+        <button class="xl:hidden text-navy text-xl"
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-navy via-gold to-navy"></div>
+
+    <div id="mobile-menu"
+      class="hidden xl:hidden glass-panel border-t absolute w-full left-0 px-6 py-6 flex flex-col gap-4 shadow-2xl top-20">
+      <a href="/" class="text-lg font-medium text-slate-600">Home</a>
+      <a href="/about/" class="text-lg font-medium text-slate-600">About</a>
+      <a href="/experience/" class="text-lg font-medium text-slate-600">Experience</a>
+      <a href="/meet-the-team/" class="text-lg font-medium text-slate-600">Meet the Team</a>
+        <a href="/endorsements/" class="text-lg font-medium text-slate-600">Endorsements</a>
+        <a href="/community/" class="text-lg font-bold text-navy">Community</a>
+      <a href="/contact/" class="text-lg font-medium text-slate-600">Contact</a>
+      <div class="flex flex-col gap-3 mt-2">
+        <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer" class="bg-navy text-white text-center py-3 rounded-xl font-bold">Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CRITICAL: ALL links must end with / for clean URLs -->
+  <!-- Use /about/ NOT /about.html -->
+  <!-- Use /experience/ NOT /experience.html -->
+  <!-- Use /contact/ NOT /contact.html -->
+
+  <!-- COMMUNITY HERO -->
+  <header class="pt-36 pb-12 px-6 text-center">
+    <div class="max-w-3xl mx-auto animate-fade-up">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-navy tracking-tight mb-6">Out in the <span class="text-gradient-gold">Community</span></h1>
+      <p class="text-lg md:text-xl text-slate-600 leading-relaxed">Block parties, local businesses, schools, and neighbors' front yards. This is where the work happens.</p>
+    </div>
+  </header>
+
+  <!-- COMMUNITY GALLERY -->
+  <section class="pb-24 px-6" aria-label="Community photo gallery">
+    <div class="max-w-6xl mx-auto">
+      <div class="masonry" id="community-gallery">
+        <div class="masonry-item" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-1" aria-label="View photo: Supporter outside the Joe Smith campaign office">
+            <img src="/images/community/gallery/thumbs/g-17-IMG_0065.jpg" data-full="/images/community/gallery/g-17-IMG_0065.jpg" data-lightbox="community-gallery" alt="Supporter outside the Joe Smith campaign office" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-2" aria-label="View photo: Joe Smith and supporters with Select Joe Smith signs at the Lemon Grove lemon">
+            <img src="/images/community/gallery/thumbs/g-13-IMG_9490.jpg" data-full="/images/community/gallery/g-13-IMG_9490.jpg" data-lightbox="community-gallery" alt="Joe Smith and supporters with Select Joe Smith signs at the Lemon Grove lemon" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-3" aria-label="View photo: Volunteers holding Joe Smith signs on a street corner">
+            <img src="/images/community/gallery/thumbs/g-15-20261014_122040.jpg" data-full="/images/community/gallery/g-15-20261014_122040.jpg" data-lightbox="community-gallery" alt="Volunteers holding Joe Smith signs on a street corner" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-4" aria-label="View photo: Joe Smith in a straw hat with neighbors around a table at a community gathering">
+            <img src="/images/community/gallery/thumbs/g-16-IMG_0020.jpg" data-full="/images/community/gallery/g-16-IMG_0020.jpg" data-lightbox="community-gallery" alt="Joe Smith in a straw hat with neighbors around a table at a community gathering" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="0.4056">
+          <button type="button" class="photo-tile" id="gallery-photo-5" aria-label="View photo: Large group of community members at the Closing Circle event">
+            <img src="/images/community/gallery/thumbs/community-4.jpg" data-full="/images/community/community-4.jpg" data-lightbox="community-gallery" alt="Large group of community members at the Closing Circle event" width="900" height="365" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-6" aria-label="View photo: Joe Smith sharing a meal with supporters at a local restaurant">
+            <img src="/images/community/gallery/thumbs/g-18-IMG_0117.jpg" data-full="/images/community/gallery/g-18-IMG_0117.jpg" data-lightbox="community-gallery" alt="Joe Smith sharing a meal with supporters at a local restaurant" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="1.5025">
+          <button type="button" class="photo-tile" id="gallery-photo-7" aria-label="View photo: Joe Smith speaking at Grossmont College">
+            <img src="/images/community/gallery/thumbs/community-3.jpg" data-full="/images/community/community-3.jpg" data-lightbox="community-gallery" alt="Joe Smith speaking at Grossmont College" width="599" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-8" aria-label="View photo: Neighbors gathering at a park outreach event">
+            <img src="/images/community/gallery/thumbs/g-22-IMG_1379.jpg" data-full="/images/community/gallery/g-22-IMG_1379.jpg" data-lightbox="community-gallery" alt="Neighbors gathering at a park outreach event" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-9" aria-label="View photo: Joe Smith with a large group at a local business event">
+            <img src="/images/community/gallery/thumbs/g-24-IMG_8376.jpg" data-full="/images/community/gallery/g-24-IMG_8376.jpg" data-lightbox="community-gallery" alt="Joe Smith with a large group at a local business event" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-10" aria-label="View photo: Joe Smith with community leaders at a formal event">
+            <img src="/images/community/gallery/thumbs/g-21-IMG_1259.jpg" data-full="/images/community/gallery/g-21-IMG_1259.jpg" data-lightbox="community-gallery" alt="Joe Smith with community leaders at a formal event" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-11" aria-label="View photo: Joe Smith with friends at the Big Lemon">
+            <img src="/images/community/gallery/thumbs/g-30-IMG_9648.jpg" data-full="/images/community/gallery/g-30-IMG_9648.jpg" data-lightbox="community-gallery" alt="Joe Smith with friends at the Big Lemon" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-12" aria-label="View photo: Joe Smith with families sharing a meal">
+            <img src="/images/community/gallery/thumbs/g-23-IMG_4314.jpg" data-full="/images/community/gallery/g-23-IMG_4314.jpg" data-lightbox="community-gallery" alt="Joe Smith with families sharing a meal" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-13" aria-label="View photo: Joe Smith with local youth at a community field day">
+            <img src="/images/community/gallery/thumbs/community-1.jpg" data-full="/images/community/community-1.jpg" data-lightbox="community-gallery" alt="Joe Smith with local youth at a community field day" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-14" aria-label="View photo: Joe Smith visiting the Lemon Grove Historical Society">
+            <img src="/images/community/gallery/thumbs/g-25-IMG_8602.jpg" data-full="/images/community/gallery/g-25-IMG_8602.jpg" data-lightbox="community-gallery" alt="Joe Smith visiting the Lemon Grove Historical Society" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-15" aria-label="View photo: Joe Smith with artists at a community art event">
+            <img src="/images/community/gallery/thumbs/g-33-IMG_9824.jpg" data-full="/images/community/gallery/g-33-IMG_9824.jpg" data-lightbox="community-gallery" alt="Joe Smith with artists at a community art event" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-16" aria-label="View photo: Joe Smith with young people at an outdoor festival">
+            <img src="/images/community/gallery/thumbs/g-34-IMG_9933.jpg" data-full="/images/community/gallery/g-34-IMG_9933.jpg" data-lightbox="community-gallery" alt="Joe Smith with young people at an outdoor festival" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-17" aria-label="View photo: Joe Smith taking a selfie with supporters holding Select Joe Smith signs">
+            <img src="/images/community/gallery/thumbs/g-06-IMG_7923.jpg" data-full="/images/community/gallery/g-06-IMG_7923.jpg" data-lightbox="community-gallery" alt="Joe Smith taking a selfie with supporters holding Select Joe Smith signs" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-18" aria-label="View photo: A full room at a community celebration">
+            <img src="/images/community/gallery/thumbs/g-32-IMG_9813.jpg" data-full="/images/community/gallery/g-32-IMG_9813.jpg" data-lightbox="community-gallery" alt="A full room at a community celebration" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-19" aria-label="View photo: Joe Smith with local business owners at Body By Discipline">
+            <img src="/images/community/gallery/thumbs/g-31-IMG_9741.jpg" data-full="/images/community/gallery/g-31-IMG_9741.jpg" data-lightbox="community-gallery" alt="Joe Smith with local business owners at Body By Discipline" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-20" aria-label="View photo: Joe Smith with community supporters">
+            <img src="/images/community/gallery/thumbs/community-2.jpg" data-full="/images/community/community-2.jpg" data-lightbox="community-gallery" alt="Joe Smith with community supporters" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.6478">
+          <button type="button" class="photo-tile" id="gallery-photo-21" aria-label="View photo: Joe Smith with community leaders at an evening event">
+            <img src="/images/community/gallery/thumbs/g-08-IMG_8851.jpg" data-full="/images/community/gallery/g-08-IMG_8851.jpg" data-lightbox="community-gallery" alt="Joe Smith with community leaders at an evening event" width="900" height="583" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-22" aria-label="View photo: Joe Smith meeting a neighbor during door-to-door outreach">
+            <img src="/images/community/gallery/thumbs/g-20-IMG_0373.jpg" data-full="/images/community/gallery/g-20-IMG_0373.jpg" data-lightbox="community-gallery" alt="Joe Smith meeting a neighbor during door-to-door outreach" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-23" aria-label="View photo: Joe Smith at a voter registration booth">
+            <img src="/images/community/gallery/thumbs/g-05-IMG_6053.jpg" data-full="/images/community/gallery/g-05-IMG_6053.jpg" data-lightbox="community-gallery" alt="Joe Smith at a voter registration booth" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-24" aria-label="View photo: Joe Smith with a supporter at a local restaurant">
+            <img src="/images/community/gallery/thumbs/g-26-IMG_9037.jpg" data-full="/images/community/gallery/g-26-IMG_9037.jpg" data-lightbox="community-gallery" alt="Joe Smith with a supporter at a local restaurant" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.4611">
+          <button type="button" class="photo-tile" id="gallery-photo-25" aria-label="View photo: Volunteers waving Joe Smith campaign signs">
+            <img src="/images/community/gallery/thumbs/g-01-20261014_122025.jpg" data-full="/images/community/gallery/g-01-20261014_122025.jpg" data-lightbox="community-gallery" alt="Volunteers waving Joe Smith campaign signs" width="900" height="415" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-26" aria-label="View photo: Joe Smith with a supporter at the campaign office">
+            <img src="/images/community/gallery/thumbs/g-19-IMG_0148.jpg" data-full="/images/community/gallery/g-19-IMG_0148.jpg" data-lightbox="community-gallery" alt="Joe Smith with a supporter at the campaign office" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-27" aria-label="View photo: Joe Smith with Lemon Grove families at the Big Lemon">
+            <img src="/images/community/gallery/thumbs/g-14-IMG_9492.jpg" data-full="/images/community/gallery/g-14-IMG_9492.jpg" data-lightbox="community-gallery" alt="Joe Smith with Lemon Grove families at the Big Lemon" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-28" aria-label="View photo: Joe Smith with supporters at a neighborhood restaurant">
+            <img src="/images/community/gallery/thumbs/g-27-IMG_9043.jpg" data-full="/images/community/gallery/g-27-IMG_9043.jpg" data-lightbox="community-gallery" alt="Joe Smith with supporters at a neighborhood restaurant" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-29" aria-label="View photo: Joe Smith with kids holding Sweeten Lemon Grove petition flyers">
+            <img src="/images/community/gallery/thumbs/g-07-IMG_8348.jpg" data-full="/images/community/gallery/g-07-IMG_8348.jpg" data-lightbox="community-gallery" alt="Joe Smith with kids holding Sweeten Lemon Grove petition flyers" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-30" aria-label="View photo: Joe Smith with two community members at a local business">
+            <img src="/images/community/gallery/thumbs/g-03-IMG_3837.jpg" data-full="/images/community/gallery/g-03-IMG_3837.jpg" data-lightbox="community-gallery" alt="Joe Smith with two community members at a local business" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-31" aria-label="View photo: Joe Smith with a longtime resident">
+            <img src="/images/community/gallery/thumbs/g-28-IMG_9051.jpg" data-full="/images/community/gallery/g-28-IMG_9051.jpg" data-lightbox="community-gallery" alt="Joe Smith with a longtime resident" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="1.3333">
+          <button type="button" class="photo-tile" id="gallery-photo-32" aria-label="View photo: Joe Smith with a young family at a local restaurant">
+            <img src="/images/community/gallery/thumbs/g-10-IMG_9062.jpg" data-full="/images/community/gallery/g-10-IMG_9062.jpg" data-lightbox="community-gallery" alt="Joe Smith with a young family at a local restaurant" width="675" height="900" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-33" aria-label="View photo: Joe Smith taking a selfie with a longtime Lemon Grove resident">
+            <img src="/images/community/gallery/thumbs/g-04-IMG_3838.jpg" data-full="/images/community/gallery/g-04-IMG_3838.jpg" data-lightbox="community-gallery" alt="Joe Smith taking a selfie with a longtime Lemon Grove resident" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-34" aria-label="View photo: Joe Smith with a local supporter holding a campaign card">
+            <img src="/images/community/gallery/thumbs/g-11-IMG_9068.jpg" data-full="/images/community/gallery/g-11-IMG_9068.jpg" data-lightbox="community-gallery" alt="Joe Smith with a local supporter holding a campaign card" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+        <div class="masonry-item is-collapsed" data-ratio="0.7500">
+          <button type="button" class="photo-tile" id="gallery-photo-35" aria-label="View photo: Joe Smith helping with a neighborhood cleanup">
+            <img src="/images/community/gallery/thumbs/g-02-IMG_1403.jpg" data-full="/images/community/gallery/g-02-IMG_1403.jpg" data-lightbox="community-gallery" alt="Joe Smith helping with a neighborhood cleanup" width="900" height="675" loading="lazy">
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-6">
+        <button type="button" id="gallery-load-more" data-load-more="12" data-target="#community-gallery"
+          class="inline-flex items-center gap-2 bg-navy hover:bg-gold text-white font-bold py-3.5 px-8 rounded-full shadow-lg transition-all hover:scale-105">
+          Show More Photos <span class="opacity-70">(<span data-remaining>23</span>)</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN THE MOVEMENT -->
+  <section id="join" class="py-24 px-6 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Join the Movement</h2>
+      <p class="text-blue-100 text-xl mb-10">Sign up for updates on events, volunteer opportunities, and campaign news.
+      </p>
+
+      <div class="flex justify-center gap-3 sm:gap-5 mb-12">
+        <a href="/contact/"
+          class="bg-gold text-navy text-sm sm:text-base font-bold py-2.5 px-5 sm:py-4 sm:px-10 rounded-full hover:bg-white transition-all shadow-lg shadow-gold/20 hover:scale-105">
+          Join
+        </a>
+        <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer"
+          class="bg-white text-navy text-sm sm:text-base font-bold py-2.5 px-5 sm:py-4 sm:px-10 rounded-full hover:bg-gold hover:text-white transition-all shadow-md hover:scale-105">
+          Donate
+        </a>
+        <a href="/meet-the-team/"
+          class="glass-panel text-white/80 border-white/20 text-sm sm:text-base font-semibold py-2.5 px-5 sm:py-4 sm:px-10 rounded-full hover:bg-white hover:text-navy transition-all shadow-sm hover:scale-105">
+          Meet the Team
+        </a>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="pt-10 pb-10 px-6 mt-auto border-t border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl font-bold text-white tracking-tight">JOE SMITH</h2>
+        <p class="text-blue-200 font-medium tracking-wide text-sm mt-1 uppercase">For Lemon Grove City Council</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+        <a href="/" class="text-blue-200 hover:text-white font-semibold transition-colors">Home</a>
+        <a href="/about/" class="text-blue-200 hover:text-white font-semibold transition-colors">About</a>
+        <a href="/experience/" class="text-blue-200 hover:text-white font-semibold transition-colors">Experience</a>
+        <a href="/meet-the-team/" class="text-blue-200 hover:text-white font-semibold transition-colors">Meet the Team</a>
+        <a href="/endorsements/" class="text-blue-200 hover:text-white font-semibold transition-colors">Endorsements</a>
+        <a href="/community/" class="text-blue-200 hover:text-white font-semibold transition-colors">Community</a>
+        <a href="/contact/" class="text-blue-200 hover:text-white font-semibold transition-colors">Contact</a>
+        <a href="/donate/" class="text-blue-200 hover:text-white font-semibold transition-colors">Donate</a>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://www.facebook.com/selectjoesmith?mibextid=wwXIfr&mibextid=wwXIfr" target="_blank"
+          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+            class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/linebackerdad/?hl=en" target="_blank"
+          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/joe-smith4457/" target="_blank"
+          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all"><if
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://linktr.ee/joesmithofficial" target="_blank" rel="noopener noreferrer"
+          class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold hover:text-white transition-all" title="Linktree"><i
+            class="fa-solid fa-tree"></i></a>
+      </div>
+    </div>
+    <div class="text-center pt-10">
+      <!-- Support the Campaign: ActBlue QR -->
+      <div class="border-t border-white/10 pt-8 pb-6 mb-4">
+        <p class="text-xs font-bold uppercase tracking-widest text-blue-300/70 mb-6">Support the Campaign</p>
+        <div class="flex flex-wrap justify-center gap-8">
+          <!-- ActBlue QR -->
+          <div class="flex flex-col items-center gap-2">
+            <!-- REPLACE: Upload ActBlue QR code to Cloudinary, paste URL below -->
+            <a href="https://secure.actblue.com/donate/selectjoesmith" target="_blank" rel="noopener noreferrer"
+              class="w-20 h-20 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all">
+              <i class="fa-solid fa-qrcode text-3xl text-white/60"></i>
+            </a>
+            <span class="text-xs text-blue-200 font-semibold">Donate via ActBlue</span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-5">
+        <a href="https://linktr.ee/joesmithofficial" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-white/10 hover:bg-gold border border-white/20 text-white text-sm font-bold py-2.5 px-7 rounded-full transition-all hover:scale-105">
+          <i class="fa-solid fa-tree text-xs"></i>
+          Stay Connected &nbsp;&middot;&nbsp; linktr.ee/joesmithofficial
+        </a>
+      </div>
+      <p class="text-blue-400 text-sm">&copy; Paid for by Joe Smith for Lemon Grove City Council 2026</p>
+      <p class="text-blue-400/70 text-xs mt-1">FPPC ID: 1490547</p>
+      <a href="https://www.lovoson.com" target="_blank"
+        class="inline-flex items-center gap-2 text-blue-400/60 hover:text-white text-xs transition-colors mt-3">
+        <img src="/images/logos/lovoson-icon.svg"
+          alt="Lovoson" class="h-4 w-4 opacity-60">
+        Designed by Lovoson Media
+      </a>
+    </div>
+  </footer>
+
+
+
+  <!-- AJAX Form Logic -->
+  <script src="/css/js/script.js"></script>
+  <script src="/css/js/gallery.js" defer></script>
+</body>
+
+</html>

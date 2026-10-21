@@ -116,6 +116,14 @@
 .photo-tile:hover .tile-cap, .photo-tile:focus-visible .tile-cap { opacity: 1; transform: none; }
 .photo-tile:focus-visible { outline: 3px solid #D4AF37; outline-offset: 3px; }
 
+/* ---------- Masonry gallery (community page) ---------- */
+.masonry { display: flex; gap: 1.5rem; align-items: flex-start; }
+.masonry-col { flex: 1 1 0; min-width: 0; }
+.masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+.masonry-item .photo-tile { height: auto; }
+.masonry-item .photo-tile img { height: auto; display: block; }
+.masonry-item.is-collapsed { display: none; }
+
 /* ---------- Lightbox ---------- */
 #lightbox {
   position: fixed; inset: 0; z-index: 100;
